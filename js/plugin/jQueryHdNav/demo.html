@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html> 
+<html> 
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Pragma" content="no-cache">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<title>jQuery手机触屏滑动导航代码</title>
+
+<style type="text/css">
+	html{color:#000;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+	html *{outline:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+	body {background:#FFF;color:#4a4f5a;font: 400 14px/1.5 "微软雅黑",Helvetica,STHeiti,Droid Sans Fallback;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+	body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0}
+	input,select,textarea{font-size:100%}
+	article,aside,footer,header,nav,section,audio,canvas,video,img {display: block;}
+	table{border-collapse:collapse;border-spacing:0}
+	fieldset,img{border:0}
+	abbr,acronym{border:0;font-variant:normal}
+	del{text-decoration:line-through}
+	address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:normal}
+	ol,ul{list-style:none}
+	caption,th{text-align:left}
+	h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+	q:before,q:after{content:''}
+	button{outline:0;border:none;}
+	a:hover{text-decoration:none}
+	ins,a{text-decoration:none}
+	textarea {resize: none;}
+	iframe,img {border:0;}
+	img{display:block;width:100%;}
+	ul,ol {list-style:none;}
+	input,select,textarea {outline: 0;-webkit-user-modify: read-write-plaintext-only;}
+	input {-webkit-appearance: none;}
+	.pr{position:relative;}
+	.abs{position: absolute}
+	.fl{float:left;display:inline-block;}
+	.fr{float:right;display:inline-block;}
+	.clearfix:after{content:".";display:block;height:0;clear: both;visibility:hidden;}
+	.clearfix{*zoom:1;}
+	.wrap{min-width: 320px;max-width:768px;margin:0 auto;overflow:hidden;position:relative;}
+
+	.htit{line-height:1rem;padding:0 .3rem;color:#ff8e2e;font-size: .4rem;margin:1rem 0 .4rem 0}
+	.wrapper01 {position:relative;height: 1rem;width: 100%;overflow: hidden;margin:0 auto;border-bottom:1px solid #ccc}
+	.wrapper01 .scroller {position:absolute}
+	.wrapper01 .scroller li {height: 1rem;color:#333;float: left;line-height: 1rem;font-size: .4rem;text-align: center}
+	.wrapper01 .scroller li a{color:#333;display:block;margin:0 .3rem}
+	.wrapper01 .scroller li.cur a{color:#1cbb9b;}
+
+	.wrapper02 {position:relative;height: 1rem;width: 100%;overflow: hidden;margin:0 auto;background:#ddd}
+	.wrapper02 .scroller {position:absolute}
+	.wrapper02 .scroller li {height: 1rem;color:#333;float: left;line-height: 1rem;font-size: .4rem;text-align: center}
+	.wrapper02 .scroller li a{color:#333;display:block;margin:0 .3rem}
+	.wrapper02 .scroller li.cur{background:#1cbb9b}
+	.wrapper02 .scroller li.cur a{color:#fff;}
+
+	.wrapper03 {position:relative;height: 1rem;width: 100%;overflow: hidden;margin:0 auto;border-bottom:1px solid #ccc}
+	.wrapper03 .scroller {position:absolute}
+	.wrapper03 .scroller li {height: 1rem;color:#333;float: left;line-height: 1rem;font-size: .4rem;text-align: center}
+	.wrapper03 .scroller li a{color:#333;display:block;margin:0 .3rem;padding:0 .1rem}
+	.wrapper03 .scroller li.cur a{color:#1cbb9b;height:.9rem;border-bottom:.1rem solid #1cbb9b}
+
+	.wrapper04 {position:relative;height: 1rem;width: 80%;overflow: hidden;margin:0 auto;background:#ddd}
+	.wrapper04 .scroller {position:absolute}
+	.wrapper04 .scroller li {height: 1rem;color:#333;float: left;line-height: 1rem;font-size: .4rem;text-align: center}
+	.wrapper04 .scroller li a{color:#333;display:block;margin:0 .3rem}
+	.wrapper04 .scroller li.cur{background:#1cbb9b}
+	.wrapper04 .scroller li.cur a{color:#fff;}
+
+</style>
+</head>
+<body>
+<h2 class="htit">demo示例一</h2>
+<div class="wrapper wrapper01" id="retr">
+<div class="scroller">
+	<ul class="clearfix">
+		<li><a href="javascript:void(0)">全部科目</a></li>
+		<li><a href="javascript:void(0)">会计从业</a></li>
+		<li><a href="javascript:void(0)">会计职称</a></li>
+		<li><a href="javascript:void(0)">注会</a></li>
+		<li><a href="javascript:void(0)">税务师</a></li>
+		<li><a href="javascript:void(0)">国际证书</a></li>
+		<li><a href="javascript:void(0)">更多</a></li>
+		<li><a href="javascript:void(0)">更多注会</a></li>
+		<li><a href="javascript:void(0)">国际证书2</a></li>
+		<li><a href="javascript:void(0)">更多4</a></li>
+		<li><a href="javascript:void(0)">更多5</a></li>
+	</ul>
+</div>
+</div>
+
+<h2 class="htit">demo示例二</h2>
+<div class="wrapper wrapper02" id="wrapper02">
+<div class="scroller">
+	<ul class="clearfix">
+		<li><a href="javascript:void(0)">全部科目</a></li>
+		<li><a href="javascript:void(0)">会计从业</a></li>
+		<li><a href="javascript:void(0)">会计职称</a></li>
+		<li><a href="javascript:void(0)">注会</a></li>
+		<li><a href="javascript:void(0)">税务师</a></li>
+		<li><a href="javascript:void(0)">国际证书</a></li>
+		<li><a href="javascript:void(0)">更多</a></li>
+		<li><a href="javascript:void(0)">更多注会</a></li>
+		<li><a href="javascript:void(0)">国际证书2</a></li>
+		<li><a href="javascript:void(0)">更多4</a></li>
+		<li><a href="javascript:void(0)">更多5</a></li>
+	</ul>
+</div>
+</div>
+
+<h2 class="htit">demo示例三</h2>
+<div class="wrapper wrapper03" id="wrapper03">
+<div class="scroller">
+	<ul class="clearfix">
+		<li><a href="javascript:void(0)">全部科目</a></li>
+		<li><a href="javascript:void(0)">会计从业</a></li>
+		<li><a href="javascript:void(0)">会计职称</a></li>
+		<li><a href="javascript:void(0)">注会</a></li>
+		<li><a href="javascript:void(0)">税务师</a></li>
+		<li><a href="javascript:void(0)">国际证书</a></li>
+		<li><a href="javascript:void(0)">更多</a></li>
+		<li><a href="javascript:void(0)">更多注会</a></li>
+		<li><a href="javascript:void(0)">国际证书2</a></li>
+		<li><a href="javascript:void(0)">更多4</a></li>
+		<li><a href="javascript:void(0)">更多5</a></li>
+	</ul>
+</div>
+</div>
+
+<h2 class="htit">demo示例四</h2>
+<div class="wrapper wrapper04" id="sass">
+<div class="scroller">
+	<ul class="clearfix">
+		<li><a href="javascript:void(0)">全部科目</a></li>
+		<li><a href="javascript:void(0)">会计从业</a></li>
+		<li><a href="javascript:void(0)">会计职称</a></li>
+		<li><a href="javascript:void(0)">注会</a></li>
+		<li><a href="javascript:void(0)">税务师</a></li>
+		<li><a href="javascript:void(0)">国际证书</a></li>
+		<li><a href="javascript:void(0)">更多</a></li>
+		<li><a href="javascript:void(0)">更多注会</a></li>
+		<li><a href="javascript:void(0)">国际证书2</a></li>
+		<li><a href="javascript:void(0)">更多4</a></li>
+		<li><a href="javascript:void(0)">更多5</a></li>
+	</ul>
+</div>
+</div>
+
+<h2 class="htit">demo示例五</h2>
+<div class="wrapper02" id="demo05">
+<div class="scroller">
+	<ul class="clearfix">
+		<li><a href="javascript:void(0)">全部科目</a></li>
+		<li><a href="javascript:void(0)">会计从业</a></li>
+		<li><a href="javascript:void(0)">会计职称</a></li>
+		<li><a href="javascript:void(0)">注会</a></li>
+		<li><a href="javascript:void(0)">税务师</a></li>
+		<li><a href="javascript:void(0)">国际证书</a></li>
+		<li><a href="javascript:void(0)">更多</a></li>
+		<li><a href="javascript:void(0)">更多注会</a></li>
+		<li><a href="javascript:void(0)">国际证书2</a></li>
+		<li><a href="javascript:void(0)">更多4</a></li>
+		<li><a href="javascript:void(0)">更多5</a></li>
+	</ul>
+</div>
+</div>
+
+<h2 class="htit">demo示例六</h2>
+<div class="wrapper02" id="demo06">
+<div class="scroller">
+	<ul class="clearfix">
+		<li><a href="javascript:void(0)">北京</a></li>
+		<li><a href="javascript:void(0)">上海</a></li>
+		<li><a href="javascript:void(0)">广州</a></li>
+		<li><a href="javascript:void(0)">深证</a></li>
+		<li><a href="javascript:void(0)">杭州</a></li>
+		<li><a href="javascript:void(0)">武汉</a></li>
+		<li><a href="javascript:void(0)">天津</a></li>
+		<li><a href="javascript:void(0)">郑州</a></li>
+		<li><a href="javascript:void(0)">海口</a></li>
+		<li><a href="javascript:void(0)">郑州</a></li>
+		<li><a href="javascript:void(0)">长春</a></li>
+		<li><a href="javascript:void(0)">长沙</a></li>
+		<li><a href="javascript:void(0)">南京</a></li>
+		<li><a href="javascript:void(0)">西安</a></li>
+	</ul>
+</div>
+</div>
+
+<div style="padding:1rem .4rem;line-height:.6rem;font-size:.34rem">
+	参数说明：<br />
+	className:'cur', //当前选中点击元素的class类名<br />
+	clickScrollTime:300, //点击后滑动时间<br />
+	duibiScreenWidth:0.4, //单位以rem为准，默认为0.4rem<br />
+	fingerClick:0, //目标第0或1个选项触发,必须每一项长度一致，方可用此项<br />
+	endClickScroll:function(thisObj){}//回调函数<br />
+</div>
+
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/flexible.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript" src="js/navbarscroll.js"></script>
+<script type="text/javascript">
+$(function(){
+
+	//demo示例一到四 通过lass调取，一句可以搞定，用于页面中可能有多个导航的情况
+	$('.wrapper').navbarscroll();
+
+	//demo示例五 通过id调取
+	$('#demo05').navbarscroll({
+		defaultSelect:6,
+		endClickScroll:function(obj){
+			console.log(obj.text())
+		}
+	});
+	
+	//demo示例六 通过id调取
+	$('#demo06').navbarscroll({
+		defaultSelect:3,
+		scrollerWidth:6,
+		fingerClick:1,
+		endClickScroll:function(obj){
+			console.log(obj.text())
+		}
+	});
+});
+</script>
+
+</body>
+</html>

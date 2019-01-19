@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="wap-font-scale" content="no">
+	<title>首页</title>
+	<link rel="stylesheet" type="text/css" href="style/reset.css">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="js/zcircleMove.js"></script>
+</head>
+
+<body>
+<header>
+	<p>圆环进度条</p>
+</header>
+
+<div class="middleContent fixTop">
+	<div class="surePass" >
+        <div class="anyield">
+            <p><span>10.33</span>%<i>+</i><span>1.2</span>%</p>
+            <p>预期年化收益</p>
+        </div>
+		<canvas class="circleRun" data-run="0" id="canvasThree" amout="1000" nowData="1000"></canvas>
+    </div>
+    <div class="surePass" >
+        <div class="anyield">
+            <p><span>10.33</span>%<i>+</i><span>1.2</span>%</p>
+            <p>预期年化收益</p>
+        </div>
+		<canvas class="circleRun" data-run="0" id="canvasThree2" amout="1000" nowData="1000"></canvas>
+    </div>
+    <div class="surePass" >
+        <div class="anyield">
+            <p><span>10.33</span>%<i>+</i><span>1.2</span>%</p>
+            <p>预期年化收益</p>
+        </div>
+		<canvas class="circleRun" data-run="0" id="canvasThree3" amout="1000" nowData="1000"></canvas>
+    </div>
+    <div class="surePass restart vertical">
+       <div class="btns">
+         <p class="radius7">重新开始</p>
+       </div>
+    </div>
+</div>
+	
+	<script>
+        $(function(){
+            var findCanvas=$("#canvasThree");
+            var percents=findCanvas.attr('nowData')/findCanvas.attr('amout');
+			 percents=0.25;
+			//percents 为百分比的值  范围 0- 1
+            runCircle(
+			   { 
+			    obj:'canvasThree', 
+			    percent:0.25,
+				url:'images/zstart.png',   //飞机小图地址
+				imgWidth:30,
+				imgHeight:30,
+				circleBottomColor:"#e6eaed",//圆环底色
+				outerColorStart:'#ebf7ff',  //外部圆环 渐变色
+				outerColorMid:'#d8eefc',
+				outerColorEnd:'#a7cee7',
+				innerColorStart:'#6fbef0',  //内部圆环 渐变色
+				innerColorEnd:'#058ee4',
+			   }
+		    );
+			var run= runCircle(
+			   { 
+			    obj:'canvasThree2', 
+			    percent:1
+			   }
+		    );	
+			runCircle(
+			   { 
+			    obj:'canvasThree3', 
+			    percent:0.75
+			   }
+		    );;		
+            var count=0;
+            $(".circleRun").each(function(){
+                var obj=$(this)[0];
+                var canvasW=parseInt($(this).parent().width())*0.76;
+                obj.width = canvasW;
+                obj.height = canvasW;
+				$(".restart")[0].style.height= canvasW+"px";
+            })
+			var reTimer;
+            $(".restart").click(function(){
+		         var run=$("#canvasThree2").attr("data-run");
+			     if(run==0){
+					 clearTimeout(reTimer)
+			         reTimer=setTimeout(function(){
+					      runCircle({ 
+							obj:'canvasThree2', 
+							percent:1
+						   })   
+					 },200) 
+				 }else{
+					 clearTimeout(reTimer)
+				    return;
+				 }
+			})
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+.date{
+    height: 20px;
+    line-height: 20px;
+    background-color: #eee;
+    text-indent: 4.15vw;
+    font-size: .5rem;
+    color: #999;
+}
+.stepnum{
+    height: 50px;
+    color: #333;
+    overflow: hidden;
+    line-height: 52px;
+    background-color: #fff;
+    /*border-bottom: 1px solid #e2e2e2;*/
+    /*border-top: 1px solid #e2e2e2;*/
+}
+.stepnum>div{
+    height: 35px;
+    font-size: 0.56rem;
+    padding-left: 4.15vw;
+    float: left;
+    border-bottom: 1px solid #e2e2e2;
+}
+.stepnum div span{
+    padding-left: 2vw;
+    padding-right: 1vw;
+    font-size: 1.24rem;
+}
+.time{
+    float: right!important;
+    padding-right: 5vw!important;
+    font-size: .5rem!important;
+    color: #999;
+}
+
+
+
+.modal{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .3);
+    display: none;
+}
+.take_notes{
+    width: 74vw;
+    height: 150px;
+    position: fixed;
+    top:120px;
+    left: 13vw;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.take_notes p{
+    text-align: center;
+    margin-top: 20px;
+}
+.entry{
+    margin-top: 16px;
+    font-size: 0.875rem;
+}
+.entry input{
+    border: none;
+    border-bottom: 1px solid #e2e2e2;
+    outline: none;
+    width: 56.6%;
+    margin-left: 21.7%;
+    margin-right: 10px;
+    text-align: center;
+    height: 22px;
+    line-height: 22px;
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+.confirm{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid #e2e2e2;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    font-size: .875rem;
+}
+.cancel{
+    width: 49%;
+    border-right: 1px solid #e2e2e2;
+}
+.ok{
+    width: 49%;
+    cursor: pointer;
+    color: #59bfe6;
+}
+@media screen and (min-width: 320px) and (max-width: 360px) {
+    .sele{
+        padding-left: 35%;
+    }
+    .sele label{
+        display: block;
+        margin-top: 5px;
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 380px) {
+    .sele{
+        padding-left: 35%;
+    }
+    .sele label{
+        display: block;
+        margin-top: 5px;
+    }
+}
+@media screen and (min-width: 390px) and (max-width: 460px) {
+    .sele{
+        padding-left: 38%;
+    }
+    .sele label{
+        display: block;
+        margin-top: 5px;
+    }
+}
+@media  (min-width: 768px) {
+    .sele{
+        padding-left: 43%;
+    }
+    .sele label{
+        display: block;
+        margin-top: 5px;
+    }
+}
+@media  (min-width: 1024px) {
+    .sele{
+        padding-left: 45%;
+    }
+    .sele label{
+        display: block;
+        margin-top: 5px;
+    }
+}
+
+.bt {
+	border-bottom: 1px solid #cccccc47;
+}
+content>ul{
+    margin-bottom: 50px;
+}

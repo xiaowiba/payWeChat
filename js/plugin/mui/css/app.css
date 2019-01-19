@@ -1,0 +1,345 @@
+/*
+ *这是单独为hello mui准备的个性化css，可以覆盖标准mui的css定义；
+ * 在实际项目开发时，建议为App单独写一个css文件，从而实现项目的自定义皮肤功能；
+ * 
+ * */
+/*解决后退时的报错*/
+/** {*/
+    /*touch-action: none;*/
+/*}*/
+.f8 {
+    font-size: 8px !important;
+}
+.f9 {
+    font-size: 9px !important;
+}
+.f10 {
+    font-size: 10px !important;
+}
+.f11 {
+    font-size: 11px !important;
+}
+.f12 {
+    font-size: 12px !important;
+}
+.f13 {
+    font-size: 13px !important;
+}
+.f14 {
+    font-size: 14px !important;
+}
+.f15 {
+    font-size: 15px !important;
+}
+.f16 {
+    font-size: 16px !important;
+}
+.f17 {
+    font-size: 17px !important;
+}
+.f18 {
+    font-size: 18px !important;
+}
+.border {
+	border: 1px solid black;
+}
+.mui-plus header.mui-bar{
+	display: none;
+}
+.mui-plus .mui-bar-nav~.mui-content{
+	padding: 0;
+}
+
+/*hm开头的表示仅为 Hello MUI示例定义*/
+.hm-description{
+	margin: .5em 0;
+}
+
+.hm-description>li {
+	font-size: 14px;
+	color: #8f8f94;
+}
+
+table {
+    border: 0 solid #cad9ea;
+    color: #666;
+}
+
+table th {
+    background-repeat: repeat-x;
+    height: 30px;
+}
+
+table td,
+table th {
+    /*border: 1px solid #c8c7cc;*/
+    padding: 5px;
+}
+
+table tr {
+    /*border-bottom: 1px solid #c8c7cc;*/
+    /*background-color: #f5fafe;*/
+}
+
+.b-top {
+    border-top: 1px solid #c8c7cc;
+}
+
+.b-bottom {
+    border-bottom: 1px solid #c8c7cc;
+}
+
+.b-left {
+    border-left: 1px solid #c8c7cc;
+}
+
+.b-right {
+    border-right: 1px solid #c8c7cc;
+}
+
+/*右下角的添加-start*/
+.floating-button.color-blue, .floating-button.theme-pink, .theme-pink .floating-button {
+    color: #fff;
+    background: #4cd964;
+}
+
+.floating-button {
+    color: #fff;
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    z-index: 1500;
+    overflow: hidden;
+    -webkit-transition-duration: 300ms;
+    transition-duration: 300ms;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    background-color: #4cd964;
+}
+
+i.icon.icon-plus {
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20fill%3D'%23FFFFFF'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%20width%3D'24'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M19%2013h-6v6h-2v-6H5v-2h6V5h2v6h6v2z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E")
+}
+
+.floating-button:active {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .19), 0 3px 3px rgba(0, 0, 0, .23);
+}
+/*右下角的添加-end*/
+
+/*头-start*/
+.mui-bar-nav {
+    box-shadow: none;
+    background-color: #2494f3;
+}
+.mui-bar a, .mui-bar h1 {
+    color: #FFFFFF;
+}
+/*头-end*/
+
+/*仿真键盘的输入框样式-start*/
+.keyboard-input {
+    float: right;
+    width: 40%;
+    height: 40px;
+    line-height: 20px;
+    margin-top: 4px;
+    outline: 0;
+    -webkit-appearance: none;
+    background-color: #fff;
+    border-radius: 3px;
+    font-size: 15px;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+/*仿真键盘的输入框样式-end*/
+
+/*弹出框样式-start*/
+.mui-toast-container {
+    bottom: 80% !important;
+}
+.mui-toast-message {
+    /*background: url(/app/themes/default/images/toast.png) no-repeat center 10px #000;*/
+    opacity: 0.6;
+    color: #fff;
+    width: 180px;
+    padding: 20px 5px 20px 5px;
+}
+/*弹出框样式-end*/
+/*文字溢出样式*/
+.yiChu {
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap
+}
+/*不显示样式*/
+.noShow {
+    display: none;
+}
+/*图片插件-start*/
+.mui-preview-image.mui-fullscreen {
+    position: fixed;
+    z-index: 20;
+    background-color: #000;
+}
+.mui-preview-header,
+.mui-preview-footer {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: 10;
+}
+.mui-preview-header {
+    height: 44px;
+    top: 0;
+}
+.mui-preview-footer {
+    height: 50px;
+    bottom: 0px;
+}
+.mui-preview-header .mui-preview-indicator {
+    display: block;
+    line-height: 25px;
+    color: #fff;
+    text-align: center;
+    margin: 15px auto;
+    width: 70px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    font-size: 16px;
+}
+.mui-preview-image {
+    display: none;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.mui-preview-image.mui-preview-in {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+.mui-preview-image.mui-preview-out {
+    background: none;
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+.mui-preview-image.mui-preview-out .mui-preview-header,
+.mui-preview-image.mui-preview-out .mui-preview-footer {
+    display: none;
+}
+.mui-zoom-scroller {
+    position: absolute;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    -webkit-backface-visibility: hidden;
+}
+.mui-zoom {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.mui-slider .mui-slider-group .mui-slider-item img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+.mui-android-4-1 .mui-slider .mui-slider-group .mui-slider-item img {
+    width: 100%;
+}
+.mui-android-4-1 .mui-slider.mui-preview-image .mui-slider-group .mui-slider-item {
+    display: inline-table;
+}
+.mui-android-4-1 .mui-slider.mui-preview-image .mui-zoom-scroller img {
+    display: table-cell;
+    vertical-align: middle;
+}
+.mui-preview-loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.mui-preview-loading.mui-active {
+    display: block;
+}
+.mui-preview-loading .mui-spinner-white {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+    height: 50px;
+    width: 50px;
+}
+.mui-preview-image img.mui-transitioning {
+    -webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+p img {
+    max-width: 100%;
+    height: auto;
+}
+/*图片插件-end*/

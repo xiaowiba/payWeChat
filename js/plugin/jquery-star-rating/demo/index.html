@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery star rating demo</title>
+    <style>
+        .container {
+            width: 1000px;
+            margin: 20px auto;
+        }
+        .demo1 {
+            height:100px;
+        }
+        .demo1 .star,.demo1 span {
+            float: left;margin:5px;
+        }
+
+        .demo2 li {
+            height:40px;list-style: none;
+        }
+        .demo2 .star,.demo2 span {
+            float: left;margin:5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="demo1">
+            <h2>demo1 基本使用</h2>
+            <div>
+                <div class="star"></div>
+                <span>0分</span>
+            </div>
+        </div>
+
+        <div class="demo2">
+            <h2>demo2 多个一起使用</h2>
+            <ul>
+                <li>
+                    <span>宝贝描述</span>
+                    <div class="star"></div>
+                    <span>0星</span>
+                </li>
+                <li>
+                    <span>发货速度</span>
+                    <div class="star"></div>
+                    <span>0星</span>
+                </li>
+                <li>
+                    <span>服务态度</span>
+                    <div class="star"></div>
+                    <span>0星</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="demo3">
+            <h2>demo3 改变星星数量和分数最小单位</h2>
+            <div class="star"></div>
+        </div>
+
+        <div class="demo4">
+            <h2>demo4 默认选中星星</h2>
+            <div class="star"></div>
+        </div>
+
+        <div class="demo5">
+            <h2>demo5 获得选中的星星</h2>
+            <div class="star"></div>
+        </div>
+    </div>
+
+    <script src="//cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
+    <script src="../src/jquery-star-rating.js"></script>
+    <script>
+        $('.demo1 .star').starRating({
+            eventHover: function(event, star) {
+                $(this).next('span').text(star + '分');
+            },
+            eventOut: function(event, star) {
+                $(this).next('span').text(star + '分');
+            }
+        });
+
+        $('.demo2 .star').starRating({
+            eventHover: function(event, star) {
+                $(this).next('span').text(star + '星');
+            },
+            eventOut: function(event, star) {
+                $(this).next('span').text(star + '星');
+            }
+        });
+
+        $('.demo3 .star').starRating({
+            starNumber: 10,
+            step: 1,
+        });
+
+        $('.demo4 .star').starRating({
+            defaultStar: 3.5
+        });
+
+        $('.demo5 .star').starRating({
+            eventChange: function(event, star) {
+                alert(star);
+            }
+        });
+    </script>
+</body>
+</html>

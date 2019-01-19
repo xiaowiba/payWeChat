@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mloading demo</title>
+    <link rel="stylesheet" href="src/jquery.mloading.css">
+</head>
+<body>
+    <button type="button" id="btnTest">遮罩页面</button>
+
+    <script src="http://cdn.bootcss.com/seajs/3.0.2/sea.js"></script>
+    <script>
+        seajs.config({
+            alias:{
+                'jquery':"http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"
+            }
+        });
+        seajs.use(['./src/jquery.mloading'],function(){
+            $("#btnTest").click(function(){
+                $("body").mLoading();
+            });
+        });
+    </script>
+</body>
+</html>

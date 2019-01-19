@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="sgx">
+    <!-- <link rel="stylesheet" href="css/index.css"> -->
+    <title>jquery插件编写</title>
+    <style>
+        .set_image_all {
+            cursor: pointer;
+            position: relative;
+        }
+
+        .set_image_all .set_image_item {
+            position: relative;
+            display: inline-block;
+            z-index: 11;
+            visibility: visible;
+        }
+
+        .set_image_all .set_image_top {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 10;
+        }
+
+        .set_image_all .set_image_top>div {
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        .set_image_all .set_image_top>div>img {
+            height: 100%;
+        }
+
+        .grade {
+            vertical-align: top;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="star_grade">
+    </div>
+    <br>
+    <div id="star_grade1">
+    </div>
+    <br>
+    <div id="star_grade2">
+    </div>
+    <br>
+    <div id="star_grade3">
+    </div>
+</body>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="js/markingSystem.js"></script>
+<script>
+    $("#star_grade").markingSystem({
+        num: 5,
+        havePoint: true,
+        haveGrade: true,
+        unit: '星',
+        grade: 2.5,
+        height: 20,
+        width: 20,
+    })
+    $("#star_grade1").markingSystem({
+        backgroundImageInitial: 'images/love_gary.png',
+        backgroundImageOver: 'images/love_red.png',
+        num: 5,
+        havePoint: false,
+        haveGrade: true,
+        unit: '星',
+        grade: 3,
+        height: 30,
+      width: 30,
+    })
+    $("#star_grade2").markingSystem({
+        backgroundImageInitial: 'images/face_ku_bottom.png',
+        backgroundImageOver: 'images/face_ku_top.png',
+        num: 5,
+        havePoint: true,
+        haveGrade: true,
+        unit: '星',
+        grade: 1
+    })
+    $("#star_grade3").markingSystem({
+        backgroundImageInitial: 'images/face_happy_bottom.png',
+        backgroundImageOver: 'images/face_happy_top.png',
+        num: 5,
+        havePoint: true,
+        haveGrade: true,
+        unit: '星',
+        grade: 1,
+		 height: 32,
+        width: 32,
+    })
+</script>
+
+</html>

@@ -1,0 +1,39 @@
+table{
+    border-collapse:collapse;
+    border:none;
+    width: 100vw;
+}
+table thead{
+    background-color: #fafafa;
+    font-size: .75rem;
+    font-weight: normal;
+    color: #333;
+}
+table thead tr th{
+    width: 11.8vw;
+    height: 32px;
+}
+table thead tr th:nth-child(1){
+    width: 17.4vw;
+}
+table tbody tr td{
+    text-align: center;
+    height: 32px;
+}
+table tbody tr td:nth-child(even){
+    background-color: #fafafa;
+}
+table tbody tr td{
+    color: #2494f3;
+}
+table tbody tr td:nth-child(1){
+    color: #333;
+}
+body{
+    height: 100vh;
+    overflow: auto;
+    background-color: #f7f9f8;
+}
+footer{
+    background-color: #fff;
+}

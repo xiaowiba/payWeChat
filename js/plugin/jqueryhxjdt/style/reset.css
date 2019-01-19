@@ -1,0 +1,72 @@
+/* 清除内外边距 */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, 
+dl, dt, dd, ul, ol, li, 
+pre,
+fieldset,button, input, textarea,th, td { 
+    margin: 0;
+    padding: 0;
+}
+*{ margin:0; padding:0;}
+textarea{ resize:none;}
+h4, h5, h6 { font-size: 100%; }
+ul, li, ol { list-style: none; }
+a { text-decoration: none; cursor: pointer;}
+a:hover { text-decoration: none; }
+
+abbr[title], acronym[title] { /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+q:before, q:after { content: ''; }
+
+/* 重置表单元素 */
+
+fieldset, img { border: none; } 
+button, input, select, textarea {
+    font-size: 100%;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+hr {
+    border: none;
+    height: 1px;
+}
+.fl{ display: inline; float: left;}
+.fr{ display: inline; float: right;}
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+    font-size:0;
+}
+.clearfix { *zoom:1;}
+input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px white inset;}
+*:focus {outline: none;}
+a,em,.recruit_title{-webkit-tap-highlight-color: rgba(0,0,0,0);}
+a,em,.recruit_title img{-webkit-tap-highlight-color: rgba(0,0,0,0);}
+a{-webkit-tap-highlight-color: rgba(0,0,0,0);}
+a img{-webkit-tap-highlight-color: rgba(0,0,0,0);}
+a:focus{outline:none;}
+a {outline: none;}
+a,em,.recruit_title{outline: none;}
+a:active {star:expression_r(this.onFocus=this.blur());}
+a:active,em:active,.recruit_title:active {star:expression_r(this.onFocus=this.blur());}
+:focus { outline:0; }
+i{ font-style:normal;}
+h1,h2,h3{ font-weight:normal;}
+
+.noc,.noc a{
+-webkit-user-select: none; /* Chrome all / Safari all */
+-moz-user-select: none; /* Firefox all */
+-ms-user-select: none; /* IE 10+ */ /* No support for these yet, use at own risk */
+-o-user-select: none;
+user-select: none;
+}
+
+.col3{ width: 33.33%; float: left;}

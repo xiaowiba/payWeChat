@@ -1,0 +1,148 @@
+/* 公共css start */
+html,body{
+    width: 100%;
+    height: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+.num-keyboard:after, .num-keyboard-input:after{
+	content: " ";
+    display: table;
+    clear: both;
+}
+/* 公共css end */
+
+/* 键盘相关css start */
+.num-keyboard, .num-keyboard-item{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	box-sizing: border-box;
+}
+.num-keyboard{
+    position: fixed;
+    z-index: 9999;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #fff;    
+}
+.num-keyboard-item{
+	text-align: center;
+	width: 33.33333333333%;
+    height: 50px;
+    line-height: 50px;
+    border-right: 1px solid #d1d5db;
+    border-top: 1px solid #d1d5db;
+    float: left;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 60%;
+}
+.num-keyboard :nth-child(3n){
+	border-right: none 0;
+}
+.num-keyboard-item-empty,.num-keyboard-back{
+	background-color: #d1d5db;
+}
+.num-keyboard-item0{
+	background-image: url(img/0.png);
+}
+.num-keyboard-item1{
+	background-image: url(img/1.png);
+}
+.num-keyboard-item2{
+	background-image: url(img/2.png);
+}
+.num-keyboard-item3{
+	background-image: url(img/3.png);
+}
+.num-keyboard-item4{
+	background-image: url(img/4.png);
+}
+.num-keyboard-item5{
+	background-image: url(img/5.png);
+}
+.num-keyboard-item6{
+	background-image: url(img/6.png);
+}
+.num-keyboard-item7{
+	background-image: url(img/7.png);
+}
+.num-keyboard-item8{
+	background-image: url(img/8.png);
+}
+.num-keyboard-item9{
+	background-image: url(img/9.png);
+}
+.num-keyboard-item-x{
+	background-image: url(img/x.png);
+}
+.num-keyboard-back{
+	background-image: url(img/back.png);
+}
+
+.num-keyboard-item-active{
+	background-color: #BBC0C5;
+}
+.num-keyboard-back-active{
+	background-color: #fff;
+}
+/* 键盘相关css end */
+
+/* 输入框css start */
+.num-keyboard-input{
+	position: relative !important;
+}
+.num-keyboard-input-blur{
+	color: #dadada;
+}
+.num-keyboard-input-active{
+	color: #4d4d4d;
+}
+.num-keyboard-input-elem {
+    padding: 10px 0;
+}
+.num-keyboard-input-elem span {
+    color: #101010;
+}
+.num-keyboard-input-elem, .num-keyboard-input-cursor{
+	float: left;
+}
+.num-keyboard-input-cursor{
+	width: 2px;
+	height: 100%;
+	/*background-image: url(img/input.gif);*/
+	/*background-size: 1px 50%;*/
+	/*background-position: 50% 50%;*/
+	/*background-repeat: no-repeat;*/
+	display: none;
+
+    color: #101010;
+    line-height: 40px;
+    animation:glint 1.5s infinite;
+}
+@-webkit-keyframes glint{
+    0%{opacity:1}
+    50%{opacity:0}
+    100%{opacity:1}
+}
+@keyframes glint{
+    0%{opacity:1}
+    50%{opacity:0}
+    100%{opacity:1}
+}
+
+.num-keyboard-input-empty{
+	display: none;
+    height: 76px;
+    width: 80px;
+	background-image: url(img/delete.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+    transform: scale(0.5);
+    right: -10%;
+    bottom: -45%;
+}
+/* 输入框css end */

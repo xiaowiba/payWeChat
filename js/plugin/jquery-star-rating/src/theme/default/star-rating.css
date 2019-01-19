@@ -1,0 +1,8 @@
+.star-rating-wrap {
+    background: url(star.jpg) repeat-x left top;
+    height: 24px;
+}
+.star-rating-wrap .choose-star {
+    background: url(star.jpg) repeat-x left top;
+    height: 24px;
+}

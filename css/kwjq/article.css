@@ -1,0 +1,44 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+#list li {
+    height: 12.5vh;
+    border-bottom: 1px solid #ccc;
+}
+
+#list li>a {
+    padding-top: 1.5625vh;
+    text-decoration: none;
+    color: #666;
+    overflow: hidden;
+    height: 12.5vh;
+    display: block;
+}
+
+#list li>a img {
+    width: 80px;
+    height: 9.375vh;
+    float: left;
+    margin-left: 20px;
+}
+
+#list li>a p {
+    height: 9.375vh;
+    line-height: 9.375vh;
+    margin-left: 20px;
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 60%;
+}

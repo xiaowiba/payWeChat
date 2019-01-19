@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mloading demo</title>
+    <link rel="stylesheet" href="src/jquery.mloading.css">
+</head>
+<body>
+    <button type="button" id="btnTest">遮罩页面</button>
+
+
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script src="src/jquery.mloading.js"></script>
+    <script>
+        $(function(){
+            $("#btnTest").click(function(){
+                $("body").mLoading();
+            });
+        });
+    </script>
+</body>
+</html>

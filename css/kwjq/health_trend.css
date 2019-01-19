@@ -1,0 +1,157 @@
+.bar{
+    width: 100vw;
+    height: 54px;
+    overflow: hidden;
+    position: relative;
+}
+.bar ul{
+    width: 648px;
+    overflow: hidden;
+    position: absolute;
+}
+.bar ul li {
+    width: 72px;
+    padding-top: 13px;
+}
+.bar ul li div {
+    width: 60px;
+    height: 27px;
+    border-radius: 13px;
+    line-height: 27px;
+    text-align: center;
+    font-size: .875rem;
+}
+.act{
+    background-color: #2494f3;
+    color: #fff;
+}
+.rightmodal{
+    width: 26vw;
+    height: 54px;
+    position: absolute;
+    right: 0;
+    top:0;
+    background: linear-gradient(to right, rgba(255,255,255,0) , rgba(255,255,255,1));
+}
+.content{
+    width: 100vw;
+    height: 560px;
+    background: #f7f8f9;
+    border-top: 1px solid #e2e2e2;
+}
+.tab{
+    padding: 0 15px;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    height:39px;
+    border-bottom: 1px solid #e2e2e2;
+    background-color: #fff;
+}
+.tab>li{
+    text-align: center;
+    flex-grow:1;
+    line-height: 40px;
+    height:39px;
+}
+.ac{
+    border-bottom: 1px solid #3494f3;
+}
+.trd{
+    width: 100vw;
+    height: 280px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #fff;
+    border-top:1px solid #e2e2e2;
+    border-bottom:1px solid #e2e2e2;
+    position: relative;
+}
+.trd>div {
+    width: 100%;
+    height: 280px;
+    visibility: hidden;
+}
+.dis{
+    display: none;
+}
+.bs{
+    font-size: .875rem!important;
+    height: 27px!important;
+    text-align: center;
+    color: #333;
+    margin-top: 0;
+}
+.addwidth {
+	width:160px;
+}
+.tabs{
+    margin-top: 20px;
+    border-top:1px solid #e2e2e2;
+    background-color: #fff;
+    height: 50px;
+}
+.tabs ul{
+    height:32px;
+    border:1px solid #e2e2e2;
+    line-height: 30px;
+    font-size: 14px;
+    width:220px;
+    margin: 10px auto;
+    border-radius: 4px;
+}
+.tabs ul li{
+    float: left;
+    text-align: center;
+    color: #3494f3;
+}
+.tabs-1{
+    width: 108px;
+}
+.tabs-2{
+    width: 111px;
+}
+.ckd{
+    background-color: #3494f3;
+    color: #fff!important;
+}
+#trend1{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+}
+#trend2{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+}
+#trend3{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+}
+#trend4{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+}
+#trend5{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+}
+#trend6{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+}
+.idx{
+    z-index: 10!important;
+    visibility: visible!important;
+}
