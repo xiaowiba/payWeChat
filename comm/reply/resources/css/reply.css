@@ -1,0 +1,472 @@
+body {
+    background-color: #F7F9F8 !important;
+}
+
+.reply-title {
+    background: url(../../resources/img/bg.png) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 80px;
+}
+
+.reply-doctor-title {
+    height: 100px;
+    display: flex;
+    border: 1px solid #EDEFEE;
+    background-color: #FFFFFF;
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+    top: -55px;
+    border-radius: 3px;
+}
+
+.doctorDetail-left {
+    height: 100%;
+    display: flex;
+    flex: 1;
+}
+
+.doctorDetail-img {
+    height: 100px;
+    width: 100px;
+    background: url(../../../resources/img/male.png) no-repeat center center;
+    background-size: 70% 70%;
+}
+
+.doctorDetail-right {
+    height: 100%;
+    flex: 3;
+}
+
+.doctorDetail-doctor {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.doctorDetail-doctor-name {
+    padding: 0 5px 0 0;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.doctorDetail-doctor div {
+    line-height: 70px;
+    margin: 0 5px 0 0;
+}
+
+.doctorDetail-hospital {
+    color: #333333;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 30px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.doctorDetail-hospital-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.reply-ask-two {
+    background-color: #FFFFFF;
+    width: 100%;
+    padding: 15px 15px 10px 15px;
+    display: flex;
+    position: absolute;
+    top: 135px;
+    border-top: 1px solid #EDEFEE;
+}
+
+.reply-ask-one {
+    background-color: #FFFFFF;
+    width: 100%;
+    padding: 15px 15px 10px 15px;
+    margin: 10px 0 0 0;
+    display: flex;
+    border-top: 1px solid #EDEFEE;
+}
+
+.reply-doctor-two {
+    background-color: #FFFFFF;
+    width: 100%;
+    padding: 15px 15px 10px 15px;
+    margin: 10px 0 0 0;
+    display: flex;
+    border-top: 1px solid #EDEFEE;
+}
+
+.reply-doctor-one {
+    background-color: #FFFFFF;
+    width: 100%;
+    padding: 15px 15px 10px 15px;
+    margin: 10px 0 0 0;
+    display: flex;
+    border-top: 1px solid #EDEFEE;
+}
+
+.reply-ask-title {
+    display: flex;
+    flex: 1;
+    height: 20px;
+    line-height: 1;
+    font-size: 14px;
+}
+
+.reply-ask-title-label {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    height: 20px;
+    line-height: 1;
+    font-size: 14px;
+}
+
+.reply-ask-title-value {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+    height: 20px;
+    line-height: 1;
+    font-size: 12px;
+    color: #999999;
+}
+
+.reply-ask-content-two {
+    background-color: #FFFFFF;
+    width: 100%;
+    padding: 0 15px 15px 15px;
+    color: #333333;
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 26px;
+}
+
+.reply-ask-content-one {
+    background-color: #FFFFFF;
+    width: 100%;
+    padding: 0 15px 15px 15px;
+    color: #333333;
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 26px;
+}
+
+.reply-doctor-content-two {
+    background-color: #FFFFFF;
+    width: 100%;
+    padding: 0 15px 10px 15px;
+    color: #333333;
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 26px;
+}
+
+.reply-doctor-content-one {
+    background-color: #FFFFFF;
+    width: 100%;
+    padding: 0 15px 10px 15px;
+    color: #333333;
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 26px;
+}
+
+.reply-doctor-sound-two {
+    background-color: #FFFFFF;
+    width: 100%;
+    padding: 0 15px 5px 15px;
+    font-size: 12px;
+    color: #333333;
+}
+
+.reply-doctor-sound-one {
+    background-color: #FFFFFF;
+    width: 100%;
+    padding: 0 15px 5px 15px;
+    font-size: 12px;
+    color: #333333;
+}
+
+.reply-doctor-sound-item {
+    width: 100%;
+    clear: both;
+    height: 40px;
+    margin: 0 0 15px 0;
+}
+
+.reply-doctor-sound-label {
+    background: url(../../resources/img/sound.png) no-repeat left center;
+    background-size: contain;
+    height: 30px;
+    width: 180px;
+    float: left;
+    opacity: 0.66;
+}
+
+/*播放时的样式*/
+.reply-doctor-sound-label-false {
+    opacity: 1;
+}
+
+.reply-doctor-sound-value {
+    height: 30px;
+    line-height: 30px;
+    color: #999999;
+    float: left;
+    padding: 0 0 0 10px;
+}
+
+.doctorDetail-toggle-two {
+    background-color: #FFFFFF;
+    width: 100%;
+    text-align: center;
+    height: 20px;
+    padding: 0 0 30px 0;
+    border-bottom: 1px solid #EDEFEE;
+}
+
+.doctorDetail-toggle-one {
+    background-color: #FFFFFF;
+    width: 100%;
+    text-align: center;
+    height: 20px;
+    padding: 0 0 30px 0;
+    border-bottom: 1px solid #EDEFEE;
+}
+
+.doctorDetail-toggle img {
+    height: 20px;
+    width: 20px;
+}
+
+.order-detail-img-two {
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.order-detail-img-one {
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+/*.order-img {*/
+    /*text-align: center;*/
+    /*margin: 0 10px 10px 10px;*/
+    /*padding: 10px 0 0 0 ;*/
+    /*display: flex;*/
+    /*border-top: 1px solid #EEEEEE;*/
+/*}*/
+
+/*.order-img-item {*/
+    /*display: flex;*/
+    /*flex: .25;*/
+    /*padding: 2px;*/
+    /*!*margin: 5px 5px 5px 0;*!*/
+    /*height: 20vw;*/
+/*}*/
+
+.order-img {
+    text-align: left;
+    margin: -10px 10px 10px 10px;
+    padding: 0 10px;
+    /*display: flex;*/
+    border-top: 0 solid #EEEEEE;
+    /*position: relative;*/
+}
+
+.order-img-item {
+    /*display: flex;*/
+    /*flex: .25;*/
+    padding: 0;
+    /*margin: 5px 5px 5px 0;*/
+    height: 22vw;
+    width: 22vw;
+    display: inline-block;
+}
+
+.order-img-item img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.reply-two-reply {
+    border-bottom: 1px solid #EDEFEE;
+}
+
+.reply-one-reply {
+    border-bottom: 1px solid #EDEFEE;
+}
+
+.reply-tip {
+    width: 100%;
+    margin: 10px 0 10px 0;
+    height: 50px;
+}
+
+.reply-tip-item {
+    font-size: 12px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #EEEEEE;
+    color: #666666;
+    transform: scale(.9);
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.reply-button {
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+}
+
+.reply-button-item {
+    width: 75%;
+    margin: 0 auto;
+    background-color: #2494F3;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 300;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 3px;
+}
+
+.reply-evaluate {
+    background-color: #FFFFFF;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0 20px 0;
+    border-bottom: 1px solid #EDEFEE;
+}
+
+.reply-evaluate-title {
+    width: 100%;
+    text-align: left;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 0 0 20px;
+    font-size: 12px;
+    font-weight: 300;
+    color: #333333;
+}
+
+.reply-evaluate-star {
+    width: 100%;
+    height: 40px;
+    /*line-height: 40px;*/
+    padding: 0 0 0 20px;
+    text-align: left;
+}
+
+.reply-evaluate-submit {
+    width: 95%;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 300;
+    color: #2494F3;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    border-top: 1px solid #EDEFEE;
+}
+
+/*评价插件-start*/
+.set_image_all {
+    cursor: pointer;
+    position: relative;
+}
+.set_image_item {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    z-index: 20;
+    margin-right: 10px !important;
+}
+.set_image_top{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+.set_image_top>div{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px !important;
+}
+.grade{
+    color: #333333;
+    vertical-align: bottom;
+    /*display: none !important;*/
+    line-height: 25px !important;
+    margin-left: 15px;
+}
+/*评价插件-end*/
+
+.reply-evaluate-result {
+    width: 100%;
+    height: 195px;
+    background: url(../../resources/img/ebg.png) no-repeat top center;
+    background-size: contain;
+    margin: 10px 0 0 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.reply-evaluate-result-logo {
+    background: url(../../resources/img/evaluate.png) no-repeat center center;
+    background-size: contain;
+    height: 30px;
+    margin: 0 0 10px 0;
+}
+
+.reply-evaluate-result-label {
+    font-size: 14px;
+    font-weight: 300;
+    height: 20px;
+}
+
+.reply-evaluate-result-content {
+    height: 30px;
+    margin: 10px 0;
+}
+
+.reply-evaluate-result-value {
+    font-size: 14px;
+    font-weight: 300;
+    height: 20px;
+}
+
+.personal-edit-button {
+    background: #F7F9F8;
+    padding: 0 20px 20px 20px;
+}
+
+.mui-btn-block {
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px 0;
+}

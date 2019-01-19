@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta http-equiv="Cache" content="no-cache" />
+
+    <title>个人中心</title>
+
+    <!--mui-start-->
+    <link rel="stylesheet" href="../../js/plugin/mui/css/mui.min.css" />
+    <link rel="stylesheet" href="../../js/plugin/mui/css/mui.picker.all.css" />
+    <link rel="stylesheet" href="../../js/plugin/mui/css/app.css" />
+    <!--mui-end-->
+
+    <link rel="stylesheet" href="resources/css/personal.css" />
+
+    <!--angular-start-->
+    <script src="../../css/ionic/ionic.bundle.min.js"></script>
+    <!--angular-end-->
+
+    <script src="../../js/plugin/jquery-2.2.4.min.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/plugin/jweixin-1.2.0.js"></script>
+
+    <!--mui-start-->
+    <script src="../../js/plugin/mui/js/mui.min.js"></script>
+    <script src="../../js/plugin/mui/js/mui.picker.all.js"></script>
+    <script src="../../js/plugin/mui/js/mui.zoom.js"></script>
+    <script src="../../js/plugin/mui/js/mui.previewimage.js"></script>
+    <script src="../../js/plugin/mui/js/mui.showLoading.js"></script>
+    <!--mui-end-->
+
+</head>
+
+<body ng-app="commApp" ng-controller="personalController">
+
+    <div class="mui-content">
+
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell mui-media personal-banner" ng-click="go('personalEdit');">
+                <a href="javascript:;" class="mui-navigate-right">
+                    <img data-preview-src="" data-preview-group="1"
+                         class="mui-media-object mui-pull-left personal-img" src="../resources/img/female.png" id="pIMG">
+                    <div class="mui-media-body personal-item">
+                        <span ng-bind="name">姓名</span>
+                        <p class='mui-ellipsis personal-phone'><span ng-bind="phone">电话</span></p>
+                    </div>
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="null"></div>
+
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell mui-media" ng-click="go('../draft/draftList', 0);">
+                <a href="javascript:;" class="mui-navigate-right">
+                    <img class="mui-media-object mui-pull-left" src="resources/img/0.png">
+                    <div class="mui-media-body f18">
+                        我的草稿
+                    </div>
+                    <div class="danWei" ng-bind="draftCount"></div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media" ng-click="go('../order/orderList', 0);">
+                <a href="javascript:;" class="mui-navigate-right">
+                    <img class="mui-media-object mui-pull-left" src="resources/img/1.png">
+                    <div class="mui-media-body f18">
+                        我的咨询
+                    </div>
+                    <div class="danWei" ng-bind="questionCount"></div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media" ng-click="go('../doctor/doctorList', 1);">
+                <a href="javascript:;" class="mui-navigate-right">
+                    <img class="mui-media-object mui-pull-left" src="resources/img/2.png">
+                    <div class="mui-media-body f18">
+                        关注的医生
+                    </div>
+                    <div class="danWei" ng-bind="doctorCount"></div>
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="null"></div>
+
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell mui-media" ng-show="false">
+                <a href="javascript:;" class="mui-navigate-right">
+                    <img class="mui-media-object mui-pull-left" src="resources/img/3.png">
+                    <div class="mui-media-body f18">
+                        关于我们
+                    </div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell mui-media" ng-click="go('../personal/service', 0);">
+                <a href="javascript:;" class="mui-navigate-right">
+                    <img class="mui-media-object mui-pull-left" src="resources/img/4.png">
+                    <div class="mui-media-body f18">
+                        服务协议
+                    </div>
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</body>
+
+<script src="../resources/js/app.js"></script>
+<script src="resources/js/personal.js"></script>
+
+</html>

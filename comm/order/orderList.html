@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta http-equiv="Cache" content="no-cache" />
+
+    <title>我的咨询</title>
+
+    <!--mui-start-->
+    <link rel="stylesheet" href="/js/plugin/mui/css/mui.min.css" />
+    <link rel="stylesheet" href="/js/plugin/mui/css/mui.picker.all.css" />
+    <link rel="stylesheet" href="/js/plugin/mui/css/app.css" />
+    <!--mui-end-->
+
+    <link rel="stylesheet" href="/js/plugin/jQuery-dropload/css/dropload.css">
+
+    <link rel="stylesheet" href="resources/css/orderList.css" />
+
+    <!--angular-start-->
+    <script src="/css/ionic/ionic.bundle.min.js"></script>
+    <!--angular-end-->
+
+    <script src="/js/plugin/jquery-2.2.4.min.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/plugin/jweixin-1.2.0.js"></script>
+
+    <!--mui-start-->
+    <script src="/js/plugin/mui/js/mui.min.js"></script>
+    <script src="/js/plugin/mui/js/mui.picker.all.js"></script>
+    <script src="/js/plugin/mui/js/mui.zoom.js"></script>
+    <script src="/js/plugin/mui/js/mui.previewimage.js"></script>
+    <script src="/js/plugin/mui/js/mui.showLoading.js"></script>
+    <!--mui-end-->
+
+    <script src="/js/plugin/ripple/ripple.min.js"></script>
+    <script src="/js/plugin/jQuery-dropload/lib/dropload.js"></script>
+
+</head>
+
+<body ng-app="commApp" ng-controller="orderListController">
+
+<div class="orderList-menu" style="display: none;">
+
+    <div id="segmentedControl" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-primary">
+        <a class="mui-control-item mui-active" href="#container-0" data-type="0" id="0">
+            全部</a>
+        <a class="mui-control-item" href="#container-1" data-type="1" id="1">
+            待付款</a>
+        <a class="mui-control-item" href="#container-2" data-type="2" id="2">
+            待回复</a>
+        <a class="mui-control-item" href="#container-3" data-type="3" id="3">
+            已完成</a>
+        <a class="mui-control-item" href="#container-4" data-type="4" id="4">
+            已关闭</a>
+    </div>
+
+</div>
+
+<div class="orderList-content" style="display: none;">
+
+    <div id="container-0" class="mui-control-content mui-active">
+
+        <div class="mui-content" ng-click="goDetail();" style="display: none;">
+
+            <div class="mui-card">
+
+                <ul class="mui-table-view">
+
+                    <li class="mui-table-view-cell">
+                        <a href="javascript:;">
+                            <div class="mui-media-body">
+
+                                <div class="orderList-doctor">
+                                    <div class="doctor-label">问诊医生：</div>
+                                    <div class="doctor-name">奥巴马</div>
+                                    <div class="order-state blue">待查看</div>
+                                </div>
+
+                                <div class="orderList-order">
+                                    <div class="order-item">
+                                        <div class="order-label">付款金额</div>
+                                        <div class="order-value">￥ 50.00</div>
+                                    </div>
+                                    <div class="order-item">
+                                        <div class="order-label">订单编号</div>
+                                        <div class="order-value">201888888888888</div>
+                                    </div>
+                                    <div class="order-item">
+                                        <div class="order-label">支付时间</div>
+                                        <div class="order-value">2018-12-17 10:39:01</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="container-1" class="mui-control-content">
+
+        <div class="mui-content" style="display: none;">
+
+            <div class="mui-card">
+
+                <ul class="mui-table-view">
+
+                    <li class="mui-table-view-cell">
+                        <a href="javascript:;">
+                            <div class="mui-media-body">
+
+                                <div class="orderList-doctor">
+                                    <div class="doctor-label">问诊医生：</div>
+                                    <div class="doctor-name">奥巴马</div>
+                                    <div class="order-state red">待付款</div>
+                                </div>
+
+                                <div class="orderList-order">
+                                    <div class="order-item">
+                                        <div class="order-label">付款金额</div>
+                                        <div class="order-value">￥ 50.00</div>
+                                    </div>
+                                    <div class="order-item">
+                                        <div class="order-label">订单编号</div>
+                                        <div class="order-value">201888888888888</div>
+                                    </div>
+                                    <div class="order-item">
+                                        <div class="order-label">支付时间</div>
+                                        <div class="order-value">2018-12-17 10:39:01</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="container-2" class="mui-control-content">
+
+        <div class="mui-content" style="display: none;">
+
+            <div class="mui-card">
+
+                <ul class="mui-table-view">
+
+                    <li class="mui-table-view-cell">
+                        <a href="javascript:;">
+                            <div class="mui-media-body">
+
+                                <div class="orderList-doctor">
+                                    <div class="doctor-label">问诊医生:</div>
+                                    <div class="doctor-name">奥巴马</div>
+                                    <div class="order-state blue">待回复</div>
+                                </div>
+
+                                <div class="orderList-order">
+                                    <div class="order-item">
+                                        <div class="order-label">付款金额</div>
+                                        <div class="order-value">￥ 50.00</div>
+                                    </div>
+                                    <div class="order-item">
+                                        <div class="order-label">订单编号</div>
+                                        <div class="order-value">201888888888888</div>
+                                    </div>
+                                    <div class="order-item">
+                                        <div class="order-label">支付时间</div>
+                                        <div class="order-value">2018-12-17 10:39:01</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="container-3" class="mui-control-content">
+
+        <div class="mui-content" style="display: none;">
+
+            <div class="mui-card">
+
+                <ul class="mui-table-view">
+
+                    <li class="mui-table-view-cell">
+                        <a href="javascript:;">
+                            <div class="mui-media-body">
+
+                                <div class="orderList-doctor">
+                                    <div class="doctor-label">问诊医生:</div>
+                                    <div class="doctor-name">奥巴马</div>
+                                    <div class="order-state green">已完成</div>
+                                </div>
+
+                                <div class="orderList-order">
+                                    <div class="order-item">
+                                        <div class="order-label">付款金额</div>
+                                        <div class="order-value">￥ 50.00</div>
+                                    </div>
+                                    <div class="order-item">
+                                        <div class="order-label">订单编号</div>
+                                        <div class="order-value">201888888888888</div>
+                                    </div>
+                                    <div class="order-item">
+                                        <div class="order-label">支付时间</div>
+                                        <div class="order-value">2018-12-17 10:39:01</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="container-4" class="mui-control-content">
+
+        <div class="mui-content" style="display: none;">
+
+            <div class="mui-card">
+
+                <ul class="mui-table-view">
+
+                    <li class="mui-table-view-cell">
+                        <a href="javascript:;">
+                            <div class="mui-media-body">
+
+                                <div class="orderList-doctor">
+                                    <div class="doctor-label">问诊医生:</div>
+                                    <div class="doctor-name">奥巴马</div>
+                                    <div class="order-state gray">已关闭</div>
+                                </div>
+
+                                <div class="orderList-order">
+                                    <div class="order-item">
+                                        <div class="order-label">付款金额</div>
+                                        <div class="order-value">￥ 50.00</div>
+                                    </div>
+                                    <div class="order-item">
+                                        <div class="order-label">订单编号</div>
+                                        <div class="order-value">201888888888888</div>
+                                    </div>
+                                    <div class="order-item">
+                                        <div class="order-label">支付时间</div>
+                                        <div class="order-value">2018-12-17 10:39:01</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<header class="tabHead">
+    <span class="active"><span ng-bind="total" style="float:right;" ng-show="false"></span>全部</span>
+    <span>待付款
+        <span ng-show="isHaveUnpaid" ng-bind="noPayount" id="noPayount"
+              style="padding:1px;width:17px;height:17px;top:17px;line-height:17px;border-radius:15px;font-size:12px;background:#FF0000;color:#FFFFFF;float:right;">0</span>
+        <!--<span ng-show="isHaveUnpaid" class="mui-badge mui-badge-danger" style="float:right;">45</span>-->
+    </span>
+    <span>待回复<span ng-bind="noReplyeCount" style="float:right;" ng-show="false"></span></span>
+    <span>已完成<span ng-bind="completeCount" style="float:right;" ng-show="false"></span></span>
+    <span>已关闭<span ng-bind="closeCount" style="float:right;" ng-show="false"></span></span>
+    <b class="borders"></b>
+</header>
+
+<article class="khfxWarp">
+    <section class="khfxPane" style="display: block;">
+    </section>
+
+    <section class="khfxPane">
+    </section>
+
+    <section class="khfxPane">
+    </section>
+
+    <section class="khfxPane">
+    </section>
+
+    <section class="khfxPane">
+    </section>
+</article>
+
+</body>
+
+<script src="../resources/js/app.js"></script>
+<script src="resources/js/orderList.js"></script>
+
+</html>

@@ -1,0 +1,156 @@
+body {
+    background: #FFFFFF;
+}
+
+/*成功*/
+.success-tips-logo-consult {
+    width: 100%;
+    height: 20vh;
+    background: url(../../resources/img/one.png) no-repeat center bottom !important;
+    background-size: 30% !important;
+}
+
+/*追问*/
+.questioning-tips-logo-consult {
+    width: 100%;
+    height: 20vh;
+    background: url(../../resources/img/two.png) no-repeat center bottom !important;
+    background-size: 30% !important;
+}
+
+/*失败*/
+.fail-tips-logo-consult {
+    width: 100%;
+    height: 20vh;
+    background: url(../../resources/img/three.png) no-repeat center bottom !important;
+    background-size: 30% !important;
+}
+
+.success-tips-font {
+    width: 100%;
+    font-weight: 300;
+    font-size: 16px;
+    padding: 15px 0 15px 0;
+    text-align: center;
+}
+
+.success-tips-num {
+    width: 100%;
+    font-weight: 300;
+    font-size: 22px;
+    padding: 0 0 15px 0;
+    text-align: center;
+    color: #FF0000;
+}
+
+.success-tips-schedule {
+
+}
+
+.success-tips-button {
+    padding: 40px 30px 0 30px;
+}
+
+.order-detail-schedule {
+    background-color: #FFFFFF;
+    height: 150px;
+}
+
+.schedule-item {
+    width: 100%;
+    height: 50px;
+}
+
+.schedule-time {
+    float: left;
+    text-align: right;
+    width: 5%;
+    font-size: 12px;
+    color: #666666;
+    height: 50px;
+    line-height: 50px;
+}
+
+.schedule-content {
+
+}
+
+.schedule-content-top {
+    background: url(../../resources/img/spans.png) no-repeat;
+    text-align: left;
+    width: 90%;
+    float: left;
+    height: 50px;
+}
+
+.schedule-content-center {
+    background: url(../../resources/img/spans.png) repeat-y;
+    text-align: left;
+    width: 90%;
+    float: left;
+    height: 50px;
+}
+
+.schedule-content-bottom {
+    background: url(../../resources/img/spans.png) no-repeat;
+    text-align: left;
+    width: 90%;
+    float: left;
+    height: 50px;
+}
+
+.schedule-content-label-true {
+    background: url(../../resources/img/true.png) no-repeat center center;
+    background-size: 50% 50%;
+    width: 50px;
+    height: 50px;
+    float: left;
+    line-height: 20px;
+    text-align: center;
+    display: block;
+}
+
+.schedule-content-label-false {
+    background: url(../../resources/img/false.png) no-repeat center center;
+    background-size: 30% 30%;
+    width: 50px;
+    height: 50px;
+    float: left;
+    line-height: 20px;
+    text-align: center;
+    display: block;
+}
+
+.schedule-content-item {
+    float: left;
+    height: 50px;
+}
+
+.schedule-content-item-label {
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    color: #333333;
+    font-size: 12px;
+}
+
+.schedule-content-item-value {
+    height: 25px;
+    width: 100%;
+    font-size: 12px;
+    color: #999999;
+    line-height: 20px;
+}
+
+.schedule-content-item-see {
+    color: #2494F3;
+    text-decoration: underline;
+}
+
+.mui-btn-block {
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px 0;
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta http-equiv="Cache" content="no-cache" />
+
+    <title>咨询信息</title>
+
+    <!--mui-start-->
+    <link rel="stylesheet" href="/js/plugin/mui/css/mui.min.css" />
+    <link rel="stylesheet" href="/js/plugin/mui/css/mui.picker.all.css" />
+    <link rel="stylesheet" href="/js/plugin/mui/css/app.css" />
+    <!--mui-end-->
+
+    <link rel="stylesheet" href="/js/plugin/imgUp/css/index.css" />
+
+    <link rel="stylesheet" href="resources/css/consult.css" />
+
+    <!--angular-start-->
+    <script src="/css/ionic/ionic.bundle.min.js"></script>
+    <!--angular-end-->
+
+    <script src="/js/plugin/jquery-2.2.4.min.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/plugin/jweixin-1.2.0.js"></script>
+
+    <!--mui-start-->
+    <script src="/js/plugin/mui/js/mui.min.js"></script>
+    <script src="/js/plugin/mui/js/mui.picker.all.js"></script>
+    <script src="/js/plugin/mui/js/mui.zoom.js"></script>
+    <script src="/js/plugin/mui/js/mui.previewimage.js"></script>
+    <script src="/js/plugin/mui/js/mui.showLoading.js"></script>
+    <!--mui-end-->
+
+    <script src="/js/plugin/ripple/ripple.min.js"></script>
+    <script src="/js/plugin/vconsole.min.js"></script>
+
+    <style>
+        .z_photo .up-section, .z_photo .z_file {
+            margin: 0 !important;
+        }
+        .z_photo {
+            padding: 0 0 0 10px !important;
+        }
+    </style>
+
+</head>
+
+<body ng-app="commApp" ng-controller="consultController">
+
+    <div class="consult-doctor" ng-show="consultState">
+        <div class="doctor-label">问诊医生</div>
+        <div class="doctor-name" ng-bind="doctorName">医生名</div>
+    </div>
+
+    <div class="consult-describe">
+        <span>病情描述</span>
+    </div>
+
+    <div class="consult-content">
+        <div class="voice" ng-click="vStart();">
+            <div class="voice-item">
+                <span>语音</span>
+            </div>
+
+        </div>
+        <div class="content">
+            <textarea class="content-textarea"
+                      id="textarea"
+                      maxlength="500"
+                      ng-model="content"
+                      placeholder="{{placeholder}}"
+                      ng-change="getNum();"></textarea>
+            <div class="content-num">
+                <span>(</span>
+                <span ng-bind="nLength" id="nLength"></span>
+                <span>/ 500 )</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="consult-img">
+        <div class="z_photo upimg-div">
+            <span class="z_file fl">
+                <input type="file" name="file" id="file" class="file" value="" accept="image/jpg,image/jpeg,image/png,image/bmp" multiple />
+            </span>
+        </div>
+    </div>
+
+    <div class="consult-tip">
+        <span>上传患处照片/化验单/检查片子/报告单等资料有利于医生给您更好的建议。</span>
+    </div>
+
+    <div class="consult-null"></div>
+
+    <div class="consult-cost">
+        <div class="cost-label">问诊费用</div>
+        <div class="cost-num" ng-bind="num">￥ 50.00</div>
+    </div>
+
+    <div class="consult-button" data-ripple="ripple" ng-show="consultState">
+        <div class="consult-button-item">
+            <div class="draft">存为草稿</div>
+            <div class="submit" id="consult">确认咨询</div>
+        </div>
+    </div>
+
+    <div class="consult-button" ng-show="questionState" id="questioning">
+        <div class="consult-button-item">
+            <div class="submit">确认咨询</div>
+        </div>
+    </div>
+
+    <aside class="mask works-mask">
+        <div class="mask-content" style="position: fixed;top: 50%;left: 16%;width: 270px;height: 140px;border-radius: 13px;margin: 0;">
+            <p class="del-p" style="height: 86px;line-height: 94px;">您确定要删除吗？</p>
+            <p class="check-p" style="height: 45px;line-height: 55px;">
+                <span class="del-com wsdel-ok">确定</span>
+                <span class="wsdel-no">取消</span>
+            </p>
+        </div>
+    </aside>
+
+    <aside class="masks works-mask" ng-show="voiceState">
+        <div class="reason-div">
+            <div class="reason-font">
+                <span>剩余</span>
+                <span ng-bind="curCount"></span>
+                <span>秒</span>
+            </div>
+            <div class="reason-content"></div>
+            <div class="reason-button">
+                <div class="reason-cancel" ng-click="vCancel();">
+                    <span>取消</span>
+                </div>
+                <div class="reason-submit" ng-click="vSubmit();">
+                    <span>说完了</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+</body>
+
+<script src="../resources/js/app.js"></script>
+<script src="resources/js/consult.js"></script>
+
+</html>

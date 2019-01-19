@@ -1,0 +1,271 @@
+.consult-doctor {
+    background-color: #FFFFFF;
+    font-size: 16px;
+    color: #333333;
+    line-height: 1;
+    font-weight: 600;
+    display: flex;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.doctor-label {
+    padding: 15px;
+    display: flex;
+    flex: 1;
+}
+
+.doctor-name {
+    padding: 15px;
+    display: flex;
+    flex: 3;
+}
+
+.consult-describe {
+    /*background-color: #F7F9F8;*/
+    font-size: 14px;
+    color: #333333;
+    line-height: 1;
+    font-weight: 600;
+    padding: 12px 15px;
+}
+
+.consult-content {
+    display: flex;
+    background-color: #FFFFFF;
+    border-top: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.voice {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.voice-item {
+    background: url(../../resources/img/voice.png) no-repeat top center;
+    background-size: contain;
+    width: 65%;
+    margin: 10px 0 0 0;
+    text-align: center;
+    color: #2494F3;
+    font-weight: 300;
+    font-size: 12px;
+    padding: 40px 0 0 0;
+    border: 1px solid #FFFFFF;
+}
+
+.content {
+    display: flex;
+    flex: 5;
+    padding: 15px 15px 15px 0;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.content-item {
+    word-wrap: break-word;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.content-textarea {
+    min-height: 200px;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.content-num {
+    width: 100px;
+    height: 20px;
+    text-align: right;
+    padding: 0 15px 0 0;
+    font-size: 12px;
+    color: #999999;
+}
+
+.consult-tip {
+    width: 100%;
+    background-color: #FFFFFF;
+    font-weight: 300;
+    color: #999999;
+    font-size: 12px;
+    padding: 0 5px 5px 10px;
+    text-align: left;
+}
+
+.consult-img {
+    margin: 0;
+    padding: 10px 0 5px 0;
+    background-color: #FFFFFF;
+}
+
+.z_photo {
+    display: block !important;
+}
+
+.z_photo .z_file {
+    position: relative !important;
+    margin: 0 0 0 2px;
+    display: inline-block;
+}
+
+.z_photo .up-section {
+    display: inline-block;
+    margin: 0 1px 0 1px !important;
+}
+
+.consult-null {
+    width: 100%;
+    height: 10px;
+    background-color: transparent;
+}
+
+.consult-cost {
+    background-color: #FFFFFF;
+    font-size: 16px;
+    color: #333333;
+    line-height: 1;
+    font-weight: 600;
+    display: flex;
+    border-bottom: 1px solid #EEEEEE;
+    border-top: 1px solid #EEEEEE;
+    margin: 0 0 50px 0;
+}
+
+.cost-label {
+    padding: 15px;
+    display: flex;
+    flex: 1;
+}
+
+.cost-num {
+    padding: 15px;
+    display: flex;
+    flex: 3;
+    color: #FF0101;
+}
+
+.consult-button {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+}
+
+.consult-button-item {
+    height: 50px;
+    display: flex;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1;
+    color: #FFFFFF;
+}
+
+.draft {
+    display: flex;
+    flex: 2;
+    background-color: #FF9000;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit {
+    display: flex;
+    flex: 3;
+    background-color: #2494F3;
+    justify-content: center;
+    align-items: center;
+}
+
+.mui-popup-text {
+    text-align: left !important;
+}
+
+/*遮罩层样式*/
+.masks{
+    z-index: 1000;
+    /*display: none;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.4) !important;
+}
+
+.reason-div {
+    background-size: contain;
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 260px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.reason-font {
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    line-height: 50px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.reason-content {
+    background: url(../../resources/img/NBvoice.png) no-repeat center center;
+    background-size: contain;
+    width: 100%;
+    height: 130px;
+    position: relative;
+    top: 0;
+    border-radius: 3px;
+    font-size: 12px;
+    margin: 10px 0 10px 0;
+}
+
+.reason-button {
+    position: relative;
+    height: 60px;
+    top: 0;
+    display: flex;
+}
+
+.reason-cancel {
+    height: 40px;
+    margin: 10px 0 0 25px;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    color: #2494F3;
+    background-color: #FFFFFF;
+    border: 1px solid #2494F3;
+    font-size: 14px;
+}
+
+.reason-submit {
+    height: 40px;
+    line-height: 1;
+    margin: 10px 25px 0 10px;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    color: #FFFFFF;
+    background-color: #2494F3;
+    font-size: 14px;
+}
+
+.red {
+    color: #FF0000 !important;
+}

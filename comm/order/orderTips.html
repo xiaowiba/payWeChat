@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta http-equiv="Cache" content="no-cache" />
+
+    <title id="title">支付成功</title>
+
+    <!--mui-start-->
+    <link rel="stylesheet" href="/js/plugin/mui/css/mui.min.css" />
+    <link rel="stylesheet" href="/js/plugin/mui/css/mui.picker.all.css" />
+    <link rel="stylesheet" href="/js/plugin/mui/css/app.css" />
+    <!--mui-end-->
+
+    <link rel="stylesheet" href="resources/css/orderTips.css" />
+
+    <!--angular-start-->
+    <script src="/css/ionic/ionic.bundle.min.js"></script>
+    <!--angular-end-->
+
+    <script src="/js/plugin/jquery-2.2.4.min.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/plugin/jweixin-1.2.0.js"></script>
+
+    <!--mui-start-->
+    <script src="/js/plugin/mui/js/mui.min.js"></script>
+    <script src="/js/plugin/mui/js/mui.picker.all.js"></script>
+    <script src="/js/plugin/mui/js/mui.zoom.js"></script>
+    <script src="/js/plugin/mui/js/mui.previewimage.js"></script>
+    <script src="/js/plugin/mui/js/mui.showLoading.js"></script>
+    <!--mui-end-->
+
+    <script src="/js/plugin/vconsole.min.js"></script>
+
+</head>
+
+<body ng-app="commApp" ng-controller="orderTipsController">
+
+    <div class="success-tips-logo success-tips-logo-consult"></div>
+
+    <div class="success-tips-font" ng-bind="font"></div>
+
+    <div class="success-tips-num" ng-bind="num" ng-show="numState"></div>
+
+    <div class="success-tips-schedule" ng-show="scheduleState">
+        <div class="schedule-item">
+            <div class="schedule-time"></div>
+            <div class="schedule-content-top">
+                <span class="schedule-content-label schedule-content-label-false"></span>
+                <div class="schedule-content-item">
+                    <div class="schedule-content-item-label">您的问诊信息已经发送给医生。</div>
+                </div>
+            </div>
+        </div>
+        <div class="schedule-item">
+            <div class="schedule-time"></div>
+            <div class="schedule-content-center">
+                <span class="schedule-content-label schedule-content-label-false"></span>
+                <div class="schedule-content-item" style="padding: 0;margin: -5px 0 0 0;">
+                    <div class="schedule-content-item-label" style="line-height: 20px;" id="moreContent">
+                        <span>医生看到后，会电话给您回复，请留意<br>010开头的电话号码。</span><br>
+                        <span style="color: #FF0000;font-weight: 900;">注意：医患通话最长为15分钟。</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="schedule-item">
+            <div class="schedule-time"></div>
+            <div class="schedule-content-bottom">
+                <span class="schedule-content-label schedule-content-label-false"></span>
+                <div class="schedule-content-item" style="padding: 10px 0 0 0;">
+                    <div class="schedule-content-item-label" style="line-height: 20px;">
+                        <span id="moreContentReply">医生电话回复后，会开具咨询医嘱，请留意<br>微信通知。问诊进度请在</span>
+                        <span class="schedule-content-item-see" ng-click="go('orderList');">我的问诊</span>
+                        <span>中查看。</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="success-tips-button">
+        <button type="button" class="mui-btn mui-btn-primary mui-btn-block" ng-click="go('../personal/personal');">返回</button>
+    </div>
+
+</body>
+
+<script src="../resources/js/app.js"></script>
+<script src="resources/js/orderTips.js"></script>
+
+</html>

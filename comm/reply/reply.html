@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta http-equiv="Cache" content="no-cache" />
+
+    <title>医生回复</title>
+
+    <link rel="stylesheet" href="/css/kwjq/animate.css" />
+
+    <!--mui-start-->
+    <link rel="stylesheet" href="/js/plugin/mui/css/mui.min.css" />
+    <link rel="stylesheet" href="/js/plugin/mui/css/mui.picker.all.css" />
+    <link rel="stylesheet" href="/js/plugin/mui/css/app.css" />
+    <!--mui-end-->
+
+    <link rel="stylesheet" href="resources/css/reply.css" />
+
+    <!--angular-start-->
+    <script src="/css/ionic/ionic.bundle.min.js"></script>
+    <!--angular-end-->
+
+    <script src="/js/plugin/jquery-2.2.4.min.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/plugin/jweixin-1.2.0.js"></script>
+
+    <!--mui-start-->
+    <script src="/js/plugin/mui/js/mui.min.js"></script>
+    <script src="/js/plugin/mui/js/mui.picker.all.js"></script>
+    <script src="/js/plugin/mui/js/mui.zoom.js"></script>
+    <script src="/js/plugin/mui/js/mui.previewimage.js"></script>
+    <script src="/js/plugin/mui/js/mui.showLoading.js"></script>
+    <!--mui-end-->
+
+    <!--水波荡漾-start-->
+    <script src="/js/plugin/ripple/ripple.min.js"></script>
+    <!--水波荡漾-end-->
+
+    <!--评价-start-->
+    <script src="/js/plugin/jqueryPinfeng/js/markingSystem.js"></script>
+    <!--评价-end-->
+
+    <script src="/js/plugin/vconsole.min.js"></script>
+
+</head>
+
+<body ng-app="commApp" ng-controller="replyController">
+
+    <div class="reply-title"></div>
+
+    <div class="reply-doctor-title">
+
+        <div class="doctorDetail-left">
+            <div class="doctorDetail-img"></div>
+        </div>
+        <div class="doctorDetail-right">
+            <div class="doctorDetail-doctor">
+                <div class="doctorDetail-doctor-name" ng-bind="doctorName">医生姓名</div>
+                <div>主任医师</div>
+                <div>超声科</div>
+            </div>
+            <div class="doctorDetail-hospital">
+                <div class="doctorDetail-hospital-item">解放军总医院（301医院）</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--追问-start-->
+    <div ng-show="THREE" class="reply-reply-two">
+
+        <div class="reply-ask-two">
+            <div class="reply-ask-title">
+                <div class="reply-ask-title-label">
+                    <span>追问内容</span>
+                </div>
+                <div class="reply-ask-title-value">
+                    <span ng-bind="moreTime"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="reply-ask-content-two" ng-bind="askContentTwo"></div>
+
+        <div class="order-detail-img-two" ng-show="upTwo">
+            <div class="order-img">
+                <div class="order-img-item" ng-repeat="Img in upImgContainerMore track by $index">
+                    <img ng-src="{{Img.src}}" data-preview-src="" data-preview-group="1" />
+                </div>
+            </div>
+        </div>
+
+        <div class="doctorDetail-toggle-two" ng-click="toggleTwo();">
+            <img src="resources/img/down.png" ng-show="downTwo"/>
+            <img src="resources/img/up.png" ng-show="upTwo"/>
+        </div>
+
+    </div>
+    <!--追问-end-->
+
+    <!--追问回复-start-->
+    <div ng-show="FOUR" class="reply-two-reply">
+
+        <div class="reply-doctor-two">
+            <div class="reply-ask-title">
+                <div class="reply-ask-title-label">
+                    <span>追问回复</span>
+                </div>
+                <div class="reply-ask-title-value">
+                    <span ng-bind="replyMoreTime"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="reply-doctor-content-two" ng-bind="replyContentTwo"></div>
+
+        <div class="reply-doctor-sound-two">
+            <div class="reply-doctor-sound-item" ng-repeat="sound in upVoiceContainerMoreReply track by $index">
+                <div class="reply-doctor-sound-label" ng-click="play($event, sound.date);">
+                    <audio preload="auto">
+                        <source ng-src="{{voiceUrl(sound.src)}}" type="audio/mpeg">
+                    </audio>
+                    <s></s>
+                </div>
+                <div class="reply-doctor-sound-value">{{sound.length}}″</div>
+            </div>
+        </div>
+
+        <div class="order-detail-img-two">
+            <div class="order-img">
+                <div class="order-img-item" ng-repeat="Img in upImgContainerMoreReply track by $index">
+                    <img ng-src="{{Img.src}}" data-preview-src="" data-preview-group="1" />
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--追问回复-end-->
+
+    <!--提问-start-->
+    <div ng-show="ONE" class="reply-reply-one">
+
+        <div class="reply-ask-one">
+            <div class="reply-ask-title">
+                <div class="reply-ask-title-label">
+                    <span>问诊内容</span>
+                </div>
+                <div class="reply-ask-title-value">
+                    <span ng-bind="firstTime"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="reply-ask-content-one" ng-bind="askContentOne"></div>
+
+        <div class="order-detail-img-one" ng-show="upOne">
+            <div class="order-img">
+                <div class="order-img-item" ng-repeat="Img in upImgContainerFirst track by $index">
+                    <img ng-src="{{Img.src}}" data-preview-src="" data-preview-group="1" />
+                </div>
+            </div>
+        </div>
+
+        <div class="doctorDetail-toggle-one" ng-click="toggleOne();">
+            <img src="resources/img/down.png" ng-show="downOne"/>
+            <img src="resources/img/up.png" ng-show="upOne"/>
+        </div>
+
+    </div>
+    <!--提问-end-->
+
+    <!--提问回复-start-->
+    <div ng-show="TWO" class="reply-one-reply">
+
+        <div class="reply-doctor-one">
+            <div class="reply-ask-title">
+                <div class="reply-ask-title-label">
+                    <span>医生回复</span>
+                </div>
+                <div class="reply-ask-title-value">
+                    <span ng-bind="replyTime"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="reply-doctor-content-one" ng-bind="replyContentOne"></div>
+
+        <div class="reply-doctor-sound-one">
+            <div class="reply-doctor-sound-item" ng-repeat="sound in upVoiceContainerFirstReply track by $index">
+                <div class="reply-doctor-sound-label" ng-click="play($event, sound.date);">
+                    <audio preload="auto">
+                        <source ng-src="{{voiceUrl(sound.src)}}" type="audio/mpeg">
+                    </audio>
+                    <s></s>
+                </div>
+                <div class="reply-doctor-sound-value">{{sound.length}}″</div>
+            </div>
+        </div>
+
+        <div class="order-detail-img-one">
+            <div class="order-img">
+                <div class="order-img-item" ng-repeat="Img in upImgContainerFirstReply track by $index">
+                    <img ng-src="{{Img.src}}" data-preview-src="" data-preview-group="1" />
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--提问回复-end-->
+
+    <!--小提示-start-->
+    <div class="reply-tip">
+        <div class="reply-tip-item">
+            <span>医生给出咨询建议后，您可以基于本次问诊内容免费追问</span>
+            <span style="color: #2494F3;">1</span>
+            <span>次，超出追问次数将收取咨询费用，系统将在3天后自动关闭追问入口。</span>
+        </div>
+    </div>
+    <!--小提示-end-->
+
+    <!--追问按钮-start-->
+    <div class="reply-button" ng-click="goConsult();" ng-show="questionButton">
+        <div class="reply-button-item">追问</div>
+    </div>
+    <!--追问按钮-end-->
+
+    <!--评估提交-start-->
+    <div class="reply-evaluate" ng-show="evaluateState">
+        <div class="reply-evaluate-title">
+            <span>您对医生的服务是否是否满意？请打分：</span>
+        </div>
+        <div class="reply-evaluate-star">
+            <div id="star"></div>
+        </div>
+        <div class="reply-evaluate-submit" ng-click="evaluateSubmit();">
+            <span>提交</span>
+        </div>
+    </div>
+    <!--评价提交-end-->
+
+    <!--评价结果-start-->
+    <div class="reply-evaluate-result" ng-show="evaluateResState">
+        <div class="reply-evaluate-result-logo"></div>
+        <div class="reply-evaluate-result-label">
+            <span>评价成功~</span>
+        </div>
+        <div class="reply-evaluate-result-content" id="starRes" style="pointer-events: none;"></div>
+        <div class="reply-evaluate-result-value">
+            <span ng-bind="evaluateRes"></span>
+            <span>&nbsp;分</span>
+        </div>
+    </div>
+    <!--评价结果-end-->
+
+    <div class="reply-button" ng-click="back();" ng-show="true" style="height: 60px;">
+        <div class="reply-button-item">返回</div>
+    </div>
+
+    <input type="hidden" id="evaluateResult" value="0" /><!--评价的结果-->
+
+</body>
+
+<script src="../resources/js/app.js"></script>
+<script src="resources/js/reply.js"></script>
+
+</html>

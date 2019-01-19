@@ -1,0 +1,71 @@
+{
+  "result": 200,
+  "data": {
+    "orderId": 3,
+    "patientId": 15952,
+    "patientName": "超级赛亚人",
+    "patientPlatformKey": "42b891cd",
+    "headImg": "",
+    "gender": "",
+    "age": "",
+    "doctorId": 4350,
+    "doctorName": "张志彬",
+    "doctorPlatformKey": "42b891cd",
+    "contentFirst": [
+      {
+        "contType": 2,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consultation/files/HmPatient/19814/images/adda2019011916349635553325325.jpg",
+        "length": 0
+      },
+      {
+        "contType": 2,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consultation/files/HmPatient/19814/images/adda2019011916356710553325325.jpg",
+        "length": 0
+      },
+      {
+        "contType": 2,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consultation/files/HmPatient/19814/images/adda2019011916353413553325325.jpg",
+        "length": 0
+      },
+      {
+        "contType": 2,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consultation/files/HmPatient/19814/images/adda2019011916355215553325325.jpg",
+        "length": 0
+      },
+      {
+        "contType": 2,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consultation/files/HmPatient/19814/images/adda2019011916351318553325325.jpg",
+        "length": 0
+      },
+      {
+        "contType": 1,
+        "cont": "这是第一个支付的测试订单",
+        "length": 0
+      }
+    ],
+    "contentFirstReply": null,
+    "contentMore": null,
+    "contentMoreReply": null,
+    "scheduleTime1": "",
+    "scheduleTime2": "",
+    "scheduleTime3": "",
+    "remainTime": "2019-01-21 16:35:20",
+    "outTradeNo": "20190119163520421981410193991039",
+    "totalFee": 50.00,
+    "addTime": "2019-01-19 16:35:20",
+    "payTime": "",
+    "closeReson": "",
+    "state": "待付款",
+    "type": 1,
+    "contentType": 0,
+    "more": 0,
+    "score": 0,
+    "firstTime": "2019-01-19 16:35:20",
+    "replyTime": "",
+    "moreTime": "",
+    "replyMoreTime": "",
+    "getScore": 0
+  },
+  "message": "成功",
+  "isdes": false
+}

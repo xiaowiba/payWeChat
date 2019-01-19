@@ -1,0 +1,149 @@
+{
+  "result": 200,
+  "data": {
+    "orderId": 7,
+    "patientId": 15952,
+    "patientName": "超级赛亚人",
+    "patientPlatformKey": "42b891cd",
+    "headImg": "",
+    "gender": "",
+    "age": "",
+    "doctorId": 4350,
+    "doctorName": "张志彬",
+    "doctorPlatformKey": "42b891cd",
+    "contentFirst": [
+      {
+        "contType": 1,
+        "cont": "这是个第一次回复的订单",
+        "length": 0
+      }
+    ],
+    "contentFirstReply": [
+      {
+        "contType": 2,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consult/files/HmProvider/4350/images/adda2019011916509233553325325.png",
+        "length": 0
+      },
+      {
+        "contType": 2,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consult/files/HmProvider/4350/images/adda2019011916509533553325325.png",
+        "length": 0
+      },
+      {
+        "contType": 2,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consult/files/HmProvider/4350/images/adda2019011916509633553325325.png",
+        "length": 0
+      },
+      {
+        "contType": 2,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consult/files/HmProvider/4350/images/adda2019011916509733553325325.png",
+        "length": 0
+      },
+      {
+        "contType": 2,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consult/files/HmProvider/4350/images/adda2019011916509833553325325.png",
+        "length": 0
+      },
+      {
+        "contType": 3,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consult/files/HmProvider/4350/voices/adda2019011916500034553325325.aac",
+        "length": 2
+      },
+      {
+        "contType": 1,
+        "cont": "这是个回复订单",
+        "length": 0
+      }
+    ],
+    "contentMore": [
+      {
+        "contType": 2,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consultation/files/HmPatient/19814/images/adda2019011916531314553325325.jpg",
+        "length": 0
+      },
+      {
+        "contType": 2,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consultation/files/HmPatient/19814/images/adda2019011916532617553325325.jpg",
+        "length": 0
+      },
+      {
+        "contType": 2,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consultation/files/HmPatient/19814/images/adda2019011916535020553325325.jpg",
+        "length": 0
+      },
+      {
+        "contType": 2,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consultation/files/HmPatient/19814/images/adda2019011916535123553325325.jpg",
+        "length": 0
+      },
+      {
+        "contType": 2,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consultation/files/HmPatient/19814/images/adda2019011916538226553325325.jpg",
+        "length": 0
+      },
+      {
+        "contType": 1,
+        "cont": "这是个追问，这是个追问，这是个追问，这是个追问，这是个追问，这是个追问，这是个追问，这是个追问，这是个追问，这是个追问，这是个追问，这是个追问，这是个追问，这是个追问，这是个追问，这是个追问，这是个追问，这是个追问，这是个追问，这是个追问，这是个追问，这是个追问，这是个追问，这是个追问，这是个追问，这是个追问，这是个追问，这是个追问。",
+        "length": 0
+      }
+    ],
+    "contentMoreReply": [
+      {
+        "contType": 2,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consult/files/HmProvider/4350/images/adda2019011916547451553325325.png",
+        "length": 0
+      },
+      {
+        "contType": 2,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consult/files/HmProvider/4350/images/adda2019011916547551553325325.png",
+        "length": 0
+      },
+      {
+        "contType": 2,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consult/files/HmProvider/4350/images/adda2019011916547651553325325.png",
+        "length": 0
+      },
+      {
+        "contType": 2,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consult/files/HmProvider/4350/images/adda2019011916547751553325325.png",
+        "length": 0
+      },
+      {
+        "contType": 2,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consult/files/HmProvider/4350/images/adda2019011916547751553325325.png",
+        "length": 0
+      },
+      {
+        "contType": 3,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consult/files/HmProvider/4350/voices/adda2019011916547951553325325.aac",
+        "length": 2
+      },
+      {
+        "contType": 1,
+        "cont": "回复追问",
+        "length": 0
+      }
+    ],
+    "scheduleTime1": "2019-01-19 16:53",
+    "scheduleTime2": "2019-01-19 16:54",
+    "scheduleTime3": "2019-01-19 16:54",
+    "remainTime": "2019-01-21 16点之前",
+    "outTradeNo": "20190119164731561981446403847454",
+    "totalFee": 50.00,
+    "addTime": "2019-01-19 16:47:31",
+    "payTime": "2019-01-19 16:47:37",
+    "closeReson": "",
+    "state": "已完成",
+    "type": 3,
+    "contentType": 4,
+    "more": 0,
+    "score": 0,
+    "firstTime": "2019-01-19 16:47:31",
+    "replyTime": "2019-01-19 16:50:34",
+    "moreTime": "2019-01-19 16:53:32",
+    "replyMoreTime": "2019-01-19 16:54:51",
+    "getScore": 0
+  },
+  "message": "成功",
+  "isdes": false
+}

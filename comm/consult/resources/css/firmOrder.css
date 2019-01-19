@@ -1,0 +1,124 @@
+.firm-order-title {
+    /*background-color: #F7F9F8;*/
+    font-size: 14px;
+    color: #333333;
+    line-height: 1;
+    font-weight: 600;
+    padding: 12px 15px;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.firm-order-message {
+    width: 100%;
+    font-size: 14px;
+    color: #333333;
+    background-color: #FFFFFF;
+    padding: 5px 0;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.order-item {
+    width: 100%;
+    display: flex;
+}
+
+.order-label {
+    display: flex;
+    flex: 2;
+    padding: 5px 15px;
+}
+
+.order-value {
+    display: flex;
+    flex: 5;
+    padding: 5px 15px;
+}
+
+.firm-order-ask {
+    /*background-color: #F7F9F8;*/
+    font-size: 14px;
+    color: #333333;
+    line-height: 1;
+    font-weight: 600;
+    padding: 12px 15px;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.firm-order-content {
+    background-color: #FFFFFF;
+    font-size: 14px;
+    padding: 12px 15px;
+}
+
+.firm-order-img {
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.order-img {
+    text-align: left;
+    margin: 0 10px 10px 10px;
+    padding: 10px 0 0 0;
+    border-top: 1px solid #EEEEEE;
+}
+
+.order-img-item {
+    padding: 2px;
+    height: 23vw;
+    width: 23vw;
+    display: inline-block;
+}
+
+.order-img-item img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.firm-order-null {
+    height: 10px;
+    width: 100%;
+    background-color: transparent;
+}
+
+.firm-order-cost {
+    background-color: #FFFFFF;
+    font-size: 16px;
+    color: #333333;
+    line-height: 1;
+    font-weight: 600;
+    display: flex;
+    border-bottom: 1px solid #EEEEEE;
+    border-top: 1px solid #EEEEEE;
+    margin: 0 0 50px 0;
+}
+
+.cost-label {
+    padding: 15px;
+    display: flex;
+    flex: 1;
+}
+
+.cost-num {
+    padding: 15px;
+    display: flex;
+    flex: 3;
+    color: #FF0101;
+}
+
+
+.firm-order-button {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #2494F3;
+    color: #FFFFFF;
+    font-size: 18px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}

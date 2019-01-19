@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta http-equiv="Cache" content="no-cache" />
+
+    <title>确认订单</title>
+
+    <!--mui-start-->
+    <link rel="stylesheet" href="/js/plugin/mui/css/mui.min.css" />
+    <link rel="stylesheet" href="/js/plugin/mui/css/mui.picker.all.css" />
+    <link rel="stylesheet" href="/js/plugin/mui/css/app.css" />
+    <!--mui-end-->
+
+    <link rel="stylesheet" href="resources/css/firmOrder.css" />
+
+    <!--angular-start-->
+    <script src="/css/ionic/ionic.bundle.min.js"></script>
+    <!--angular-end-->
+
+    <script src="/js/plugin/jquery-2.2.4.min.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/plugin/jweixin-1.2.0.js"></script>
+
+    <!--mui-start-->
+    <script src="/js/plugin/mui/js/mui.min.js"></script>
+    <script src="/js/plugin/mui/js/mui.picker.all.js"></script>
+    <script src="/js/plugin/mui/js/mui.zoom.js"></script>
+    <script src="/js/plugin/mui/js/mui.previewimage.js"></script>
+    <script src="/js/plugin/mui/js/mui.showLoading.js"></script>
+    <!--mui-end-->
+
+    <script src="/js/plugin/ripple/ripple.min.js"></script>
+    <script src="/js/plugin/vconsole.min.js"></script>
+
+</head>
+
+<body ng-app="commApp" ng-controller="firmOrderController">
+
+    <div class="firm-order-title">
+        <span>订单信息</span>
+    </div>
+
+    <div class="firm-order-message">
+        <div class="order-item">
+            <div class="order-label">订单编号</div>
+            <div class="order-value f12" ng-bind="outTradeNo">outTradeNo</div>
+        </div>
+        <div class="order-item">
+            <div class="order-label">问诊人</div>
+            <div class="order-value" ng-bind="patientName">patientName</div>
+        </div>
+        <div class="order-item">
+            <div class="order-label">问诊医生</div>
+            <div class="order-value" ng-bind="doctorName">doctorName</div>
+        </div>
+        <div class="order-item">
+            <div class="order-label">预计回复时间</div>
+            <div class="order-value" ng-bind="remainTime">remainTime</div>
+        </div>
+    </div>
+
+    <div class="firm-order-ask">
+        <span>问诊内容</span>
+    </div>
+
+    <div class="firm-order-content" ng-bind="contentRes"></div>
+
+    <div class="firm-order-img">
+        <div class="order-img">
+            <div class="order-img-item" ng-repeat="Img in imgArr track by $index">
+                <img ng-src="{{Img}}" data-preview-src="" data-preview-group="1" />
+            </div>
+        </div>
+    </div>
+
+    <div class="firm-order-null"></div>
+
+    <div class="firm-order-cost">
+        <div class="cost-label">问诊费用</div>
+        <div class="cost-num">￥ <span ng-bind="totalFee">金额</span></div>
+    </div>
+
+    <div class="firm-order-button" ng-click="pay();">
+        <span>付款</span>
+    </div>
+
+</body>
+
+<script src="../resources/js/app.js"></script>
+<script src="resources/js/firmOrder.js"></script>
+
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta http-equiv="Cache" content="no-cache" />
+
+    <title>咨询详情</title>
+
+    <!--mui-start-->
+    <link rel="stylesheet" href="/js/plugin/mui/css/mui.min.css" />
+    <link rel="stylesheet" href="/js/plugin/mui/css/mui.picker.all.css" />
+    <link rel="stylesheet" href="/js/plugin/mui/css/app.css" />
+    <!--mui-end-->
+
+    <link rel="stylesheet" href="resources/css/orderDetail.css" />
+
+    <!--angular-start-->
+    <script src="/css/ionic/ionic.bundle.min.js"></script>
+    <!--angular-end-->
+
+    <script src="/js/plugin/jquery-2.2.4.min.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/plugin/jweixin-1.2.0.js"></script>
+
+    <!--mui-start-->
+    <script src="/js/plugin/mui/js/mui.min.js"></script>
+    <script src="/js/plugin/mui/js/mui.picker.all.js"></script>
+    <script src="/js/plugin/mui/js/mui.zoom.js"></script>
+    <script src="/js/plugin/mui/js/mui.previewimage.js"></script>
+    <script src="/js/plugin/mui/js/mui.showLoading.js"></script>
+    <!--mui-end-->
+
+    <!--<script src="/js/plugin/ripple/ripple.min.js"></script>-->
+
+    <style>
+        .mui-toast-container {
+            bottom: 45% !important;
+        }
+    </style>
+
+</head>
+
+<body ng-app="commApp" ng-controller="orderDetailController">
+
+    <div class="order-detail-close" ng-show="orderClose">
+        <div class="close-label" ng-bind="closeTitle">订单关闭</div>
+        <div class="close-value">
+            <span>关闭原因:</span>
+            <span ng-bind="closeReson">订单回复超时，系统自动关闭</span>
+        </div>
+    </div>
+
+    <div class="order-detail-title" ng-show="orderSchedule">
+        <span>问诊进度</span>
+    </div>
+
+    <div class="order-detail-schedule" ng-show="orderSchedule">
+        <div class="schedule-item">
+            <div class="schedule-time"></div>
+            <div class="schedule-content-top">
+                <span class="schedule-content-label schedule-content-label-false" id="scheduleLabel1"></span>
+                <div class="schedule-content-item">
+                    <div class="schedule-content-item-label" id="scheduleContent1">问诊信息已经发送给医生</div>
+                    <div class="schedule-content-item-value" ng-bind="scheduleTime1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="schedule-item">
+            <div class="schedule-time"></div>
+            <div class="schedule-content-center">
+                <span class="schedule-content-label schedule-content-label-false" id="scheduleLabel2"></span>
+                <div class="schedule-content-item">
+                    <div class="schedule-content-item-label" id="scheduleContent2">医生查看问诊信息，等待处理中</div>
+                    <div class="schedule-content-item-value" ng-bind="scheduleTime2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="schedule-item">
+            <div class="schedule-time"></div>
+            <div class="schedule-content-bottom">
+                <span class="schedule-content-label schedule-content-label-false" id="scheduleLabel3"></span>
+                <div class="schedule-content-item">
+                    <div class="schedule-content-item-label" id="scheduleContent3">
+                        <span>医生已回复问诊内容&nbsp;&nbsp;</span>
+                        <span class="schedule-content-item-see" ng-click="goSee();">去查看</span>
+                    </div>
+                    <div class="schedule-content-item-value" ng-bind="scheduleTime3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="order-detail-order">
+        <span>问诊信息</span>
+    </div>
+
+    <div class="order-detail-doctor-patient">
+        <div class="order-item">
+            <div class="order-label">问诊医生</div>
+            <div class="order-value" ng-bind="doctorName"></div>
+        </div>
+        <div class="order-item">
+            <div class="order-label">问诊人</div>
+            <div class="order-value" ng-bind="patientName"></div>
+        </div>
+    </div>
+
+    <div class="order-detail-content">
+        <div class="detail-content-title" ng-bind="detailContentTitle">问诊内容</div>
+        <div class="detail-content" ng-bind="content"></div>
+    </div>
+
+    <div class="order-detail-img">
+        <div class="order-img">
+            <div class="order-img-item" ng-repeat="Img in upImgContainer track by $index">
+                <img ng-src="{{Img.src}}" data-preview-src="" data-preview-group="1" />
+            </div>
+        </div>
+    </div>
+
+    <div class="order-detail-time" ng-show="orderRemainTime">
+        <div class="time-label">预计回复时间</div>
+        <div class="time-value"><span ng-bind="remainTime"></span>点之前</div>
+    </div>
+
+    <div class="order-detail-pay">
+        <span>订单信息</span>
+    </div>
+
+    <div class="order-detail-pay-content">
+        <div class="order-item">
+            <div class="order-label">问诊费用</div>
+            <div class="order-value">￥ <span ng-bind="totalFee"></span></div>
+        </div>
+        <div class="order-item">
+            <div class="order-label">订单编号</div>
+            <div class="order-value f12" ng-bind="outTradeNo"></div>
+        </div>
+        <div class="order-item">
+            <div class="order-label">创建时间</div>
+            <div class="order-value" ng-bind="addTime"></div>
+        </div>
+        <div class="order-item">
+            <div class="order-label">支付时间</div>
+            <div class="order-value" ng-bind="payTime"></div>
+        </div>
+        <div class="order-item">
+            <div class="order-label">支付方式</div>
+            <div class="order-value" ng-bind="payMethod">微信支付</div>
+        </div>
+    </div>
+
+    <div class="order-detail-button" ng-click="showReason();"></div>
+
+    <div class="order-detail-refuse-title" ng-show="orderCloseDiv">
+        <span>退款信息</span>
+    </div>
+
+    <div class="order-detail-refuse" ng-show="orderCloseDiv">
+        <div class="order-item">
+            <div class="order-label">退款原因</div>
+            <div class="order-value" ng-bind="closeReson">退款原因内容</div>
+        </div>
+    </div>
+
+    <div class="order-detail-custom-title" ng-show="false">
+        <span>客服信息</span>
+    </div>
+
+    <div class="order-detail-custom" ng-show="false">
+        <div class="order-item">
+            <div class="order-label">详细信息</div>
+            <div class="order-value">我要退钱</div>
+        </div>
+    </div>
+
+    <aside class="mask works-mask" ng-show="reasonState">
+        <div class="reason-div">
+            <div class="reason-content">
+                <textarea maxlength="20"
+                          placeholder="请输入原因" id="reason"></textarea>
+            </div>
+            <div class="reason-button">
+                <div class="reason-cancel" ng-click="cancel();">
+                    <span>取消</span>
+                </div>
+                <div class="reason-submit" ng-click="submit();">
+                    <span>提交</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+</body>
+
+<script src="../resources/js/app.js"></script>
+<script src="resources/js/orderDetail.js"></script>
+
+</html>

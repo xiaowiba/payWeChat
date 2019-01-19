@@ -1,0 +1,328 @@
+.doctorDetail-title {
+    background: url(../../resources/img/doctorDetail/doctorDetail-title.png) no-repeat center center;
+    background-size: cover;
+    height: 100px;
+    display: flex;
+}
+
+.doctorDetail-left {
+    height: 100%;
+    display: flex;
+    flex: 1;
+}
+
+.doctorDetail-img {
+    height: 100px;
+    width: 100px;
+    background: url(../../../resources/img/male.png) no-repeat center center;
+    background-size: 70% 70%;
+}
+
+.doctorDetail-right {
+    height: 100%;
+    flex: 3;
+}
+
+.doctorDetail-doctor {
+    width: 100%;
+    height: 35px;
+    display: flex;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.doctorDetail-doctor-name {
+    padding: 0 5px 0 0;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 35px;
+}
+
+.doctorDetail-doctor div {
+    line-height: 50px;
+    margin: 0 5px 0 0;
+}
+
+.doctorDetail-hospital {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 35px;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.doctorDetail-hospital-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.doctorDetail-follow {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 15px 0 0;
+}
+
+.doctorDetail-follow-true {
+    color: #FF8A00;
+    padding: 0 10px;
+    font-size: 16px;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    border: none;
+    height: 30px;
+    line-height: 30px;
+}
+
+.doctorDetail-follow-false {
+    color: #FFFFFF;
+    padding: 0 10px;
+    font-size: 16px;
+    border-radius: 3px;
+    background-color: #FF8A00;
+    border: none;
+    height: 30px;
+    line-height: 30px;
+}
+
+.doctorDetail-exp {
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 15px;
+    width: 100%;
+    height: 20px;
+}
+
+.doctorDetail-exp span {
+    color: #FFFFFF;
+    padding: 2px 4px;
+    font-size: 12px;
+    border-radius: 3px;
+    background-color: #5C91DF;
+    border: none;
+}
+
+.doctorDetail-summary {
+    width: 100%;
+    background-color: #FFFFFF;
+    margin: 10px 0 0 0;
+}
+
+.doctorDetail-summary-title {
+    width: 50%;
+    padding: 10px 15px 5px 15px;
+    color: #333333;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.doctorDetail-summary-title img {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px 0 0;
+}
+
+.doctorDetail-summary-content {
+    padding: 0 15px 10px 15px;
+    color: #666666;
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 26px;
+    word-wrap: break-word;
+}
+
+.doctorDetail-toggle {
+    text-align: center;
+    height: 20px;
+    padding: 0 0 30px 0;
+}
+
+.doctorDetail-toggle img {
+    height: 20px;
+    width: 20px;
+}
+
+.doctorDetail-adept {
+    width: 100%;
+    background-color: #FFFFFF;
+    margin: 10px 0 0 0;
+}
+
+.doctorDetail-adept-title {
+    width: 50%;
+    padding: 10px 15px 5px 15px;
+    color: #333333;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.doctorDetail-adept-title img {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px 0 0;
+}
+
+.doctorDetail-adept-content {
+    padding: 0 15px 15px 15px;
+    color: #666666;
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.doctorDetail-adept-content span {
+    color: #2494F3;
+    padding: 2px 4px;
+    font-size: 12px;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    border: 1px solid #2494F3;
+    margin: 2px 2px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.doctorDetail-time {
+    width: 100%;
+    background-color: #FFFFFF;
+    margin: 10px 0 50px 0;
+}
+
+.doctorDetail-time-title {
+    width: 50%;
+    padding: 10px 15px 5px 15px;
+    color: #333333;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.doctorDetail-time-title img {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px 0 0;
+}
+
+.doctorDetail-time-content {
+    width: 100%;
+    padding: 5px 10px 15px 10px;
+    font-size: 12px;
+    color: #333333;
+}
+
+.danLan {
+    background-color: #F0F8FF;
+}
+
+.doctorDetail-date {
+    display: flex;
+}
+
+.doctorDetail-date div {
+    background-color: #F0F8FF;
+    display: flex;
+    flex: 1;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+}
+
+.doctorDetail-am {
+    display: flex;
+}
+
+.doctorDetail-am div {
+    display: flex;
+    flex: 1;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+}
+
+.doctorDetail-pm {
+    display: flex;
+}
+
+.doctorDetail-pm div {
+    display: flex;
+    flex: 1;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.doctorDetail-mn {
+    display: flex;
+}
+
+.doctorDetail-mn div {
+    display: flex;
+    flex: 1;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.date-null {
+    border-left: 1px solid #DDDDDD;
+    border-top-left-radius: 5px;
+}
+
+.date-am {
+    border-left: 1px solid #DDDDDD;
+}
+
+.date-pm {
+    border-left: 1px solid #DDDDDD;
+}
+
+.date-mn {
+    border-left: 1px solid #DDDDDD;
+    border-bottom-left-radius: 5px;
+}
+
+.date-end {
+    border-top-right-radius: 5px;
+}
+
+.pm-end {
+
+}
+
+.mn-end {
+    border-bottom-right-radius: 5px;
+}
+
+.doctorDetail-button {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #2494F3;
+    color: #FFFFFF;
+    font-size: 18px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
+
+/*接诊状态*/
+.receive {
+    background-color: #2494F3;
+    color: #FFFFFF;
+}

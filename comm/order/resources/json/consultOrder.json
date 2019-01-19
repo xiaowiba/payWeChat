@@ -1,0 +1,71 @@
+{
+  "result": 200,
+  "data": {
+    "orderId": 4,
+    "patientId": 15952,
+    "patientName": "超级赛亚人",
+    "patientPlatformKey": "42b891cd",
+    "headImg": "",
+    "gender": "",
+    "age": "",
+    "doctorId": 4350,
+    "doctorName": "张志彬",
+    "doctorPlatformKey": "42b891cd",
+    "contentFirst": [
+      {
+        "contType": 2,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consultation/files/HmPatient/19814/images/adda2019011916373255553325325.jpg",
+        "length": 0
+      },
+      {
+        "contType": 2,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consultation/files/HmPatient/19814/images/adda2019011916374857553325325.jpg",
+        "length": 0
+      },
+      {
+        "contType": 2,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consultation/files/HmPatient/19814/images/adda2019011916377559553325325.jpg",
+        "length": 0
+      },
+      {
+        "contType": 2,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consultation/files/HmPatient/19814/images/adda2019011916382202553325325.jpg",
+        "length": 0
+      },
+      {
+        "contType": 2,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consultation/files/HmPatient/19814/images/adda2019011916381905553325325.jpg",
+        "length": 0
+      },
+      {
+        "contType": 1,
+        "cont": "这是第二个支付的测试订单",
+        "length": 0
+      }
+    ],
+    "contentFirstReply": null,
+    "contentMore": null,
+    "contentMoreReply": null,
+    "scheduleTime1": "2019-01-19 16:39",
+    "scheduleTime2": "",
+    "scheduleTime3": "",
+    "remainTime": "2019-01-21 16点之前",
+    "outTradeNo": "20190119163903101981411121915181",
+    "totalFee": 50.00,
+    "addTime": "2019-01-19 16:39:03",
+    "payTime": "2019-01-19 16:39:22",
+    "closeReson": "",
+    "state": "待查看",
+    "type": 5,
+    "contentType": 5,
+    "more": 0,
+    "score": 0,
+    "firstTime": "2019-01-19 16:39:03",
+    "replyTime": "",
+    "moreTime": "",
+    "replyMoreTime": "",
+    "getScore": 0
+  },
+  "message": "成功",
+  "isdes": false
+}

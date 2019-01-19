@@ -1,0 +1,124 @@
+.mui-content {
+    margin: -5px 0 !important;
+}
+
+.mui-table-view-cell > a:not(.mui-btn) {
+    margin: -10px -20px !important;
+}
+
+.doctorList-title {
+    background: url(../../resources/img/doctorList/doctorList-title.png) no-repeat center center;
+    background-size: cover;
+    height: 15vw;
+}
+
+.doctorList-container {
+
+}
+
+.doctorList-doctor {
+    color: #666666;
+    font-size: 14px;
+    font-weight: 300;
+    display: flex;
+}
+
+.doctorList-doctor div {
+    margin: 5px 5px 5px 0;
+    height: 20px;
+    line-height: 20px;
+}
+
+.doctorList-doctor-name {
+    color: #333333;
+    font-size: 16px;
+    font-weight: 900;
+    padding: 0 5px 0 0;
+}
+
+.doctorList-hospital {
+    color: #666666;
+    font-size: 14px;
+    font-weight: 300;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 0 5px 0;
+}
+
+.doctorList-adept {
+    display: flex;
+    width: 100%;
+}
+
+.div-adept {
+    color: #666666;
+    font-size: 14px;
+    font-weight: 300;
+    display: flex;
+    flex: 1;
+}
+
+.div-adept-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    flex: 5;
+}
+
+.div-adept-item span {
+    color: #2494F3;
+    padding: 2px 4px;
+    font-size: 12px;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    border: 1px solid #2494F3;
+    margin: 2px 2px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.doctorList-order {
+    border-top: 1px solid #EEEEEE;
+    margin: 10px 0 0 0;
+    padding: 10px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.doctorList-state {
+    color: #666666;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.doctorList-state-true {
+    color: #37D066;
+    background-color: #FFFFFF;
+    border: 1px solid #37D066;
+    border-radius: 10px;
+    padding: 0 6px;
+    font-size: 12px;
+    margin: 0 0 0 4px;
+}
+
+.doctorList-state-false {
+    color: #666666;
+    background-color: #FFFFFF;
+    border: 1px solid #666666;
+    border-radius: 10px;
+    padding: 0 6px;
+    font-size: 12px;
+    margin: 0 0 0 4px;
+}
+
+.doctorList-money {
+    color: #FF0000;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

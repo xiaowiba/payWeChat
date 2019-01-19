@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta http-equiv="Cache" content="no-cache" />
+
+    <title>我的草稿</title>
+
+    <!--mui-start-->
+    <link rel="stylesheet" href="/js/plugin/mui/css/mui.min.css" />
+    <link rel="stylesheet" href="/js/plugin/mui/css/mui.picker.all.css" />
+    <link rel="stylesheet" href="/js/plugin/mui/css/app.css" />
+    <!--mui-end-->
+
+    <link rel="stylesheet" href="/js/plugin/jQuery-dropload/css/dropload.css">
+
+    <link rel="stylesheet" href="resources/css/draftList.css" />
+
+    <!--angular-start-->
+    <script src="/css/ionic/ionic.bundle.min.js"></script>
+    <!--angular-end-->
+
+    <script src="/js/plugin/jquery-2.2.4.min.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/plugin/jweixin-1.2.0.js"></script>
+
+    <!--mui-start-->
+    <script src="/js/plugin/mui/js/mui.min.js"></script>
+    <script src="/js/plugin/mui/js/mui.picker.all.js"></script>
+    <script src="/js/plugin/mui/js/mui.zoom.js"></script>
+    <script src="/js/plugin/mui/js/mui.previewimage.js"></script>
+    <script src="/js/plugin/mui/js/mui.showLoading.js"></script>
+    <!--mui-end-->
+
+    <script src="/js/plugin/jQuery-dropload/lib/dropload.js"></script>
+
+</head>
+
+<body ng-app="commApp" ng-controller="draftListController">
+
+    <div class="draftList-container">
+
+        <div class="mui-content" ng-click="goDetail();" style="display: none;">
+
+        <div class="mui-card">
+
+            <ul class="mui-table-view">
+
+                <li class="mui-table-view-cell mui-media">
+                    <a href="javascript:;">
+                        <div class="mui-media-body">
+
+                            <div class="draftList-item">
+                                <div class="draftList-label">问诊医生</div>
+                                <div class="draftList-value">疾风剑豪</div>
+                            </div>
+                            <div class="draftList-item">
+                                <div class="draftList-label">问诊人</div>
+                                <div class="draftList-value">火男</div>
+                            </div>
+                            <div class="draftList-item">
+                                <div class="draftList-label">问诊内容</div>
+                                <div class="draftList-value yiChu">我以前身体特别健康，去年感觉皮肤皱...</div>
+                            </div>
+                            <div class="draftList-item">
+                                <div class="draftList-label">保存草稿时间</div>
+                                <div class="draftList-value">2018-11-20</div>
+                            </div>
+
+                        </div>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+
+    </div>
+
+    <div class="khfxWarp"></div>
+
+</body>
+
+<script src="../resources/js/app.js"></script>
+<script src="resources/js/draftList.js"></script>
+
+</html>

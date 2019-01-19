@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta http-equiv="Cache" content="no-cache" />
+
+    <title id="title">个人信息</title>
+
+    <!--mui-start-->
+    <link rel="stylesheet" href="/js/plugin/mui/css/mui.min.css" />
+    <link rel="stylesheet" href="/js/plugin/mui/css/mui.picker.all.css" />
+    <link rel="stylesheet" href="/js/plugin/mui/css/app.css" />
+    <!--mui-end-->
+
+    <link rel="stylesheet" href="resources/css/personalEdit.css" />
+
+    <!--angular-start-->
+    <script src="/css/ionic/ionic.bundle.min.js"></script>
+    <!--angular-end-->
+
+    <script src="/js/plugin/jquery-2.2.4.min.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/plugin/jweixin-1.2.0.js"></script>
+
+    <!--mui-start-->
+    <script src="/js/plugin/mui/js/mui.min.js"></script>
+    <script src="/js/plugin/mui/js/mui.picker.all.js"></script>
+    <script src="/js/plugin/mui/js/mui.zoom.js"></script>
+    <script src="/js/plugin/mui/js/mui.previewimage.js"></script>
+    <script src="/js/plugin/mui/js/mui.showLoading.js"></script>
+    <!--mui-end-->
+
+    <script src="/js/plugin/photoClip/dist/iscroll-zoom.min.js"></script>
+    <script src="/js/plugin/photoClip/dist/hammer.min.js"></script>
+    <script src="/js/plugin/photoClip/dist/photoClip.min.js"></script>
+
+</head>
+
+<body ng-app="commApp" ng-controller="personalEditController">
+
+<div class="mui-content" ng-show="personal">
+
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell personal-edit-img" ng-click="editImg();">
+            <a class="mui-navigate-right">
+                头像
+                <img src="../resources/img/female.png" class="personal-edit-img-item" id="pIMG">
+            </a>
+        </li>
+        <li class="mui-table-view-cell personal-edit-item" id="name">
+            <a class="mui-navigate-right">
+                姓名
+                <div class="danWei" ng-bind="name"></div>
+            </a>
+        </li>
+        <li class="mui-table-view-cell personal-edit-item" id="sex">
+            <a class="mui-navigate-right">
+                性别
+                <div class="danWei" ng-bind="sex"></div>
+            </a>
+        </li>
+        <li class="mui-table-view-cell personal-edit-item" id="birthday">
+            <a class="mui-navigate-right">
+                出生日期
+                <div class="danWei" ng-bind="birthday"></div>
+            </a>
+        </li>
+        <li class="mui-table-view-cell personal-edit-item" id="phone" ng-click="editPhone();">
+            <a class="mui-navigate-right">
+                绑定手机号
+                <div class="danWei" ng-bind="phone"></div>
+            </a>
+        </li>
+    </ul>
+
+    <div class="personal-edit-tip">
+        <span>完善真实信息，有助于帮您管理病程史。</span>
+    </div>
+
+    <div class="personal-edit-button" ng-show="true">
+        <button type="button" class="mui-btn mui-btn-primary mui-btn-block" ng-click="back();">返回</button>
+    </div>
+
+</div>
+
+<div class="mui-content" ng-show="pPhone">
+
+    <div class="personal-edit-phone-edit">
+        <div class="personal-edit-phone-edit-label">
+            原绑定手机号
+        </div>
+        <div class="personal-edit-phone-edit-value" ng-bind="phone"></div>
+    </div>
+
+    <div class="personal-edit-phone-edit" style="padding: 10px 15px;">
+        <input type="text" maxlength="11" placeholder="请输入需要绑定的新手机号"
+               ng-model="newPhone" style="border: none;" class="mui-input-clear" />
+    </div>
+
+    <div class="personal-edit-phone-edit" style="padding: 10px 15px;">
+        <div class="personal-edit-phone-edit-label">
+            <input type="text" maxlength="6" placeholder="请输入验证码"
+                   ng-model="newCode" style="border: none;" class="mui-input-clear" />
+        </div>
+        <div class="personal-edit-phone-edit-value">
+            <div class="personal-edit-phone-edit-value-button">
+                <button type="button"
+                        id="getCode" class="mui-btn mui-btn-primary"
+                        ng-click="getVerify();" style="height: 30px;line-height: 1;">获取验证码</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="personal-edit-phone-button">
+        <button type="button" class="mui-btn" ng-click="cancelPhone();">取消</button>
+        <button type="button" class="mui-btn mui-btn-primary" ng-click="submitPhone();">确定</button>
+    </div>
+
+</div>
+
+</body>
+
+<script src="../resources/js/app.js"></script>
+<script src="resources/js/personalEdit.js"></script>
+
+</html>

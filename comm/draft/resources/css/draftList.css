@@ -1,0 +1,16 @@
+.draftList-item {
+    width: 100%;
+    display: flex;
+    padding: 5px 0;
+}
+
+.draftList-label {
+    display: flex;
+    flex: 3;
+}
+
+.draftList-value {
+    display: flex;
+    flex: 5;
+    align-items: center;
+}
