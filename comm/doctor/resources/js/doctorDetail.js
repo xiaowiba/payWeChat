@@ -23,7 +23,7 @@ commApp.controller('doctorDetailController', function ($scope, $state, $http, $f
         $.ajax({
             async: false,
             method: 'get',
-            url:'/wxPayH5Api/payIndex',
+            url:'../personal/resources/json/payIndex.json',
             data:{
                 account:$scope.account,
                 openId:$scope.openId
@@ -36,7 +36,7 @@ commApp.controller('doctorDetailController', function ($scope, $state, $http, $f
                     return false;
                 }
 
-                var data = (JSON.parse(Data)).data;
+                var data = Data.data;
 
                 //微信openID
                 $scope.openId = data.openId;
@@ -67,7 +67,8 @@ commApp.controller('doctorDetailController', function ($scope, $state, $http, $f
         $.ajax({
             async: false,
             method: 'post',
-            url:$scope.addaUrl + '/rest/consult/doctor',
+            url:'../doctor/resources/json/doctor.json',
+            //url:$scope.addaUrl + '/rest/consult/doctor',
             data:{
                 patientId:$scope.patientId,
                 patientPlatformKey:$scope.patientPlatformKey,
@@ -187,7 +188,7 @@ commApp.controller('doctorDetailController', function ($scope, $state, $http, $f
     //关注操作
     $scope.follow = function () {
 
-        mui.showLoading('正在加载..', 'div');
+        //mui.showLoading('正在加载..', 'div');
 
         var attn = 2;
 
@@ -198,6 +199,18 @@ commApp.controller('doctorDetailController', function ($scope, $state, $http, $f
             //未关注的给予关注
             attn = 1;
         }
+
+        if(attn === 1){
+            $scope.followFont = '已关注';
+            $scope.followStyle = 'doctorDetail-follow-true';
+            $scope.attn = 1;
+        }else{
+            $scope.followFont = '关注';
+            $scope.followStyle = 'doctorDetail-follow-false';
+            $scope.attn = 0;
+        }
+
+        return false;
 
         $.ajax({
             async: true,

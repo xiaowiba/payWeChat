@@ -7,12 +7,12 @@ commApp.controller('draftListController', function ($scope, $state, $http, $filt
         $scope.account = common.getUrlParam('account');
         $scope.openId = common.getUrlParam('openId');
         $scope.pageIndex = 1;
-        $scope.pageSize = 2;
+        $scope.pageSize = 5;
 
         $.ajax({
             async: false,
             method: 'get',
-            url:'/wxPayH5Api/payIndex',
+            url:'../personal/resources/json/infoCount.json',
             data:{
                 account:$scope.account,
                 openId:$scope.openId
@@ -25,7 +25,7 @@ commApp.controller('draftListController', function ($scope, $state, $http, $filt
                     return false;
                 }
 
-                var data = (JSON.parse(Data)).data;
+                var data = Data.data;
 
                 //微信openID
                 $scope.openId = data.openId;
@@ -71,7 +71,7 @@ commApp.controller('draftListController', function ($scope, $state, $http, $filt
                     $.ajax({
                         async: false,
                         method: 'post',
-                        url:$scope.addaUrl + '/rest/consult/draftList',
+                        url:'../draft/resources/json/draftList.json',//$scope.addaUrl + '/rest/consult/draftList',
                         data:{
                             patientId:$scope.patientId,
                             patientPlatformKey:$scope.patientPlatformKey,
@@ -85,7 +85,7 @@ commApp.controller('draftListController', function ($scope, $state, $http, $filt
 
                             if(Data.result === 200){
 
-                                if (length === 0) {
+                                if (length === 0 || $scope.pageIndex === 3) {
                                     me.lock();
                                     me.noData();
                                     me.resetload();

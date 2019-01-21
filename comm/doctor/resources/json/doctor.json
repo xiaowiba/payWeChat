@@ -1,0 +1,47 @@
+{
+  "result": 200,
+  "data": {
+    "doctorId": 4349,
+    "platformKey": "42b891cd",
+    "attn": 0,
+    "headImg": "http://xiaowiba.com/xwb.jpg",
+    "doctorName": "张志彬",
+    "profLevelName": "",
+    "deptName": "内分泌科",
+    "hospName": "首0066",
+    "doctorFieldList": [
+      "接骨",
+      "小儿病",
+      "鼻炎",
+      "呼吸,气管"
+    ],
+    "roomStatus": 1,
+    "price": 0.01,
+    "workStart": "2011-01",
+    "resume": "测试内容简介，测试内容简介，测试内容简介，测试内容简介，测试内容简介，测试内容简介，测试内容简介，测试内容简介，测试内容简介测试内容简介，测试内容简介。",
+    "consultOnlineList": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ]
+  },
+  "message": "成功",
+  "isdes": false
+}

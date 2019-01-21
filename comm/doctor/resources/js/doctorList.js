@@ -10,6 +10,8 @@ commApp.controller('doctorListController', function ($scope, $state, $http, $fil
         $scope.pageIndex = 1;
         $scope.pageSize = 2;
 
+        $scope.attn = 0;
+
         if($scope.attn === 1){
             //关注列表
             $scope.doctorListState = false;
@@ -23,13 +25,13 @@ commApp.controller('doctorListController', function ($scope, $state, $http, $fil
         $.ajax({
             async: false,
             method: 'get',
-            url:'/wxPayH5Api/payIndex',
+            url:'../personal/resources/json/payIndex.json',
             data:{
                 account:$scope.account,
                 openId:$scope.openId
             },
             success:function (Data) {
-                var data = (JSON.parse(Data)).data;
+                var data = Data.data;
 
                 //微信openID
                 $scope.openId = data.openId;
@@ -68,7 +70,7 @@ commApp.controller('doctorListController', function ($scope, $state, $http, $fil
                 $.ajax({
                     async: false,
                     method: 'post',
-                    url:$scope.addaUrl + '/rest/consult/doctorList',
+                    url:'../doctor/resources/json/doctorList.json',//$scope.addaUrl + '/rest/consult/doctorList',
                     data:{
                         patientId:$scope.patientId,
                         patientPlatformKey:$scope.accessKey,
@@ -91,7 +93,8 @@ commApp.controller('doctorListController', function ($scope, $state, $http, $fil
 
                         if(Data.result === 200){
 
-                            if (length === 0) {
+                            //写死为最多3页
+                            if (length === 0 || $scope.pageIndex === 3) {
                                 //me.resetload();
                                 me.lock();
                                 me.noData();

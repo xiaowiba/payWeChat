@@ -26,7 +26,7 @@ commApp.controller('personalEditController', function ($scope, $state, $http, $f
         $.ajax({
             async: false,
             method: 'get',
-            url:'/wxPayH5Api/payIndex',
+            url:'../personal/resources/json/payIndex.json',
             data:{
                 account:$scope.account,
                 openId:$scope.openId
@@ -38,7 +38,7 @@ commApp.controller('personalEditController', function ($scope, $state, $http, $f
                     return false;
                 }
 
-                var data = (JSON.parse(Data)).data;
+                var data = Data.data;
 
                 //微信openID
                 $scope.openId = data.openId;
@@ -71,7 +71,7 @@ commApp.controller('personalEditController', function ($scope, $state, $http, $f
             async: true,
             method: 'post',
             type: 'json',
-            url: $scope.addaUrl + '/rest/consult/patient/center/' + $scope.patientPlatformKey + '/'+$scope.patientId + '/info',
+            url: '../personal/resources/json/info.json',
             data:{
                 userAccountId:$scope.patientId,
                 platfromKey:$scope.patientPlatformKey
@@ -379,6 +379,10 @@ commApp.controller('personalEditController', function ($scope, $state, $http, $f
             return false;
         }
 
+        mui.toast('演示数据,不可获取验证码');
+        mui.hideLoading();
+        return false;
+
         $.ajax({
             async: true,
             method: 'post',
@@ -447,6 +451,10 @@ commApp.controller('personalEditController', function ($scope, $state, $http, $f
     //保存全部信息
     $scope.update = function () {
         mui.showLoading('正在加载..', 'div');
+
+        mui.toast('演示数据,不可保存');
+        mui.hideLoading();
+        return false;
 
         $.ajax({
             async: true,
