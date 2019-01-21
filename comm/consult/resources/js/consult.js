@@ -88,7 +88,7 @@ commApp.controller('consultController', function ($scope, $state, $http, $filter
         $.ajax({
             async: false,
             method: 'get',
-            url:'/wxPayH5Api/payIndex',
+            url:'../personal/resources/json/payIndex.json',
             data:{
                 account:$scope.account,
                 openId:$scope.openId
@@ -101,7 +101,7 @@ commApp.controller('consultController', function ($scope, $state, $http, $filter
                     return false;
                 }
 
-                var data = (JSON.parse(Data)).data;
+                var data = Data.data;
 
                 //微信openID
                 $scope.openId = data.openId;
@@ -116,6 +116,9 @@ commApp.controller('consultController', function ($scope, $state, $http, $filter
                 $scope.patientPlatformKey = data.accessKey;
 
                 mui.hideLoading();
+
+                $scope.getDraft();
+                return false;
 
                 /**
                  * 再次编辑传 orderID
@@ -160,13 +163,14 @@ commApp.controller('consultController', function ($scope, $state, $http, $filter
 
     //获取再次编辑的详情
     $scope.getDraft = function () {
+        console.log(111);
         mui.showLoading('正在加载..', 'div');
         $scope.orderID = parseInt($scope.orderID);
 
         $.ajax({
             async: true,
             method: 'post',
-            url:$scope.addaUrl + '/rest/consult/consultOrder',
+            url:'../consult/resources/json/consultOrder.json',
             data:{
                 patientId:$scope.patientId,
                 patientPlatformKey:$scope.patientPlatformKey,
@@ -393,6 +397,8 @@ commApp.controller('consultController', function ($scope, $state, $http, $filter
     $scope.initSDK = function () {
         var url = window.location.href.split('#')[0];
 
+        return false;
+
         $.ajax({
             async: false,
             method: 'post',
@@ -441,7 +447,7 @@ commApp.controller('consultController', function ($scope, $state, $http, $filter
         $.ajax({
             async: true,
             method: 'post',
-            url: $scope.addaUrl + '/rest/consult/consultPtNifyCheck',
+            url:'../consult/resources/json/consultPtNifyCheck.json',
             data:{
                 patientPlatformKey:$scope.patientPlatformKey,
                 patientId:$scope.patientId
@@ -504,6 +510,10 @@ commApp.controller('consultController', function ($scope, $state, $http, $filter
     //已读操作
     $scope.read = function () {
         mui.showLoading('正在加载..', 'div');
+
+        mui.toast('测试操作');
+        mui.hideLoading();
+        return false;
 
         $.ajax({
             async: true,
@@ -615,6 +625,13 @@ commApp.controller('consultController', function ($scope, $state, $http, $filter
     $scope.submitAll = function () {
         mui.showLoading('正在加载..', 'div');
 
+        window.location.href = '../consult/firmOrder.html' +
+            '?account=' + $scope.account +
+            '&openId=' + $scope.openId +
+            '&orderId=' + $scope.orderId;
+
+        return false;
+
         var contList = [];
 
         if(($scope.upImgContainer).length === 0){
@@ -709,6 +726,11 @@ commApp.controller('consultController', function ($scope, $state, $http, $filter
 
     //存为草稿操作
     $scope.saveAs = function () {
+        mui.toast('演示操作');
+        mui.hideLoading();
+
+        return false;
+
         var contList = [];
 
         if(($scope.upImgContainer).length === 0){

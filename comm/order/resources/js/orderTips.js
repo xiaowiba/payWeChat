@@ -19,7 +19,7 @@ commApp.controller('orderTipsController', function ($scope, $state, $http, $filt
         $.ajax({
             async: false,
             method: 'get',
-            url:'/wxPayH5Api/payIndex',
+            url:'../personal/resources/json/payIndex.json',
             data:{
                 account:$scope.account,
                 openId:$scope.openId
@@ -32,7 +32,7 @@ commApp.controller('orderTipsController', function ($scope, $state, $http, $filt
                     return false;
                 }
 
-                var data = (JSON.parse(Data)).data;
+                var data = Data.data;
 
                 //微信openID
                 $scope.openId = data.openId;
@@ -64,7 +64,7 @@ commApp.controller('orderTipsController', function ($scope, $state, $http, $filt
         $.ajax({
             async: false,
             method: 'post',
-            url: $scope.addaUrl + '/rest/consult/consultOrderQuery',
+            url: '../order/resources/json/consultOrderQuery.json',
             data:{
                 orderId:$scope.orderId
             },

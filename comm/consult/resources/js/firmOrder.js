@@ -21,7 +21,7 @@ commApp.controller('firmOrderController', function ($scope, $state, $http, $filt
         $.ajax({
             async: false,
             method: 'get',
-            url:'/wxPayH5Api/payIndex',
+            url:'../personal/resources/json/payIndex.json',
             data:{
                 account:$scope.account,
                 openId:$scope.openId
@@ -34,7 +34,7 @@ commApp.controller('firmOrderController', function ($scope, $state, $http, $filt
                     return false;
                 }
 
-                var data = (JSON.parse(Data)).data;
+                var data = Data.data;
 
                 //微信openID
                 $scope.openId = data.openId;
@@ -65,7 +65,7 @@ commApp.controller('firmOrderController', function ($scope, $state, $http, $filt
         $.ajax({
             async: false,
             method: 'post',
-            url:$scope.addaUrl + '/rest/consult/consultOrder',
+            url:'../consult/resources/json/consultOrder.json',
             data:{
                 patientId:$scope.patientId,
                 patientPlatformKey:$scope.patientPlatformKey,
@@ -126,7 +126,7 @@ commApp.controller('firmOrderController', function ($scope, $state, $http, $filt
         $.ajax({
             async: false,
             method: 'post',
-            url: $scope.addaUrl + '/rest/consult/consultOrderQuery',
+            url: '../consult/resources/json/consultOrderQuery.json',
             data:{
                 orderId:$scope.orderId
             },
@@ -170,6 +170,7 @@ commApp.controller('firmOrderController', function ($scope, $state, $http, $filt
 
     //初始化微信SDK
     $scope.initSDK = function () {
+        return false;
         $.ajax({
             async: false,
             method: 'post',
@@ -216,6 +217,12 @@ commApp.controller('firmOrderController', function ($scope, $state, $http, $filt
      * https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=7_7&index=6
      */
     $scope.pay = function () {
+        window.location.href = '../order/orderInPayment.html' +
+            '?account=' + $scope.account +
+            '&openId=' + $scope.openId +
+            '&orderId=' + $scope.orderId;
+
+        return false;
 
         if($scope.debug === '1'){
             window.location.href = '../order/orderInPayment.html' +
