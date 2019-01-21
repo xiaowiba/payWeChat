@@ -21,7 +21,7 @@ commApp.controller('orderListController', function ($scope, $state, $http, $filt
         $.ajax({
             async: false,
             method: 'get',
-            url:'/wxPayH5Api/payIndex',
+            url:'../personal/resources/json/payIndex.json',
             data:{
                 account:$scope.account,
                 openId:$scope.openId
@@ -34,7 +34,7 @@ commApp.controller('orderListController', function ($scope, $state, $http, $filt
                     return false;
                 }
 
-                var data = (JSON.parse(Data)).data;
+                var data = Data.data;
 
                 //微信openID
                 $scope.openId = data.openId;
@@ -65,7 +65,7 @@ commApp.controller('orderListController', function ($scope, $state, $http, $filt
         $.ajax({
             async: false,
             method: 'post',
-            url:$scope.addaUrl + '/rest/consult/myOrderCount',
+            url:'../order/resources/json/myOrderCount.json',
             data:{
                 patientId:$scope.patientId,
                 patientPlatformKey:$scope.patientPlatformKey
@@ -126,7 +126,7 @@ commApp.controller('orderListController', function ($scope, $state, $http, $filt
                 $.ajax({
                     async: false,
                     method: 'post',
-                    url:$scope.addaUrl + '/rest/consult/myOrderList',
+                    url:'../order/resources/json/myOrderList.json',
                     data:{
                         patientId:$scope.patientId,
                         patientPlatformKey:$scope.patientPlatformKey,
@@ -140,7 +140,7 @@ commApp.controller('orderListController', function ($scope, $state, $http, $filt
 
                         if(Data.result === 200){
 
-                            if (length === 0) {
+                            if (length === 0 || $scope.pageIndex === 3) {
                                 me.lock();//锁定
                                 me.noData();//无数据
                                 me.resetload();//重置

@@ -104,7 +104,7 @@ commApp.controller('replyController', function ($scope, $state, $http, $filter, 
         $.ajax({
             async: false,
             method: 'get',
-            url:'/wxPayH5Api/payIndex',
+            url:'../personal/resources/json/payIndex.json',
             data:{
                 account:$scope.account,
                 openId:$scope.openId
@@ -117,7 +117,7 @@ commApp.controller('replyController', function ($scope, $state, $http, $filter, 
                     return false;
                 }
 
-                var data = (JSON.parse(Data)).data;
+                var data = Data.data;
 
                 //微信openID
                 $scope.openId = data.openId;
@@ -148,7 +148,7 @@ commApp.controller('replyController', function ($scope, $state, $http, $filter, 
         $.ajax({
             async: false,
             method: 'post',
-            url:$scope.addaUrl + '/rest/consult/consultOrder',
+            url:'../reply/resources/json/consultOrder-done.json',
             data:{
                 patientId:$scope.patientId,
                 patientPlatformKey:$scope.patientPlatformKey,
@@ -619,38 +619,40 @@ commApp.controller('replyController', function ($scope, $state, $http, $filter, 
     $scope.evaluateSubmit = function () {
         mui.showLoading('正在加载..', 'div');
 
-        // setTimeout(function () {
-        //     $scope.$apply(function(){
-        //         mui.hideLoading();
-        //
-        //         //数据的保存操作已经在插件中实现
-        //         var evaluateResult = +($('#evaluateResult').val());
-        //         $scope.evaluateState = false;
-        //         $scope.evaluateResState = true;
-        //         $scope.evaluateRes = evaluateResult;
-        //
-        //         $("#starRes").markingSystem({
-        //             backgroundImageInitial: 'images/star_hollow.png',
-        //             backgroundImageOver: 'images/star_solid.png',
-        //             num: 5,
-        //             havePoint: false,
-        //             haveGrade: false,
-        //             unit: '分',
-        //             grade: evaluateResult/2,
-        //             height: 30,
-        //             width: 30
-        //         });
-        //
-        //         //将页面滑动到最底部
-        //         var height = +($(document).height()) + 500;
-        //
-        //         $('html, body, .reply-evaluate-result').animate({
-        //             scrollTop: height
-        //         }, 1500);
-        //
-        //     });
-        //
-        // }, 500);
+        setTimeout(function () {
+            $scope.$apply(function(){
+                mui.hideLoading();
+
+                //数据的保存操作已经在插件中实现
+                var evaluateResult = +($('#evaluateResult').val());
+                $scope.evaluateState = false;
+                $scope.evaluateResState = true;
+                $scope.evaluateRes = evaluateResult;
+
+                $("#starRes").markingSystem({
+                    backgroundImageInitial: 'images/star_hollow.png',
+                    backgroundImageOver: 'images/star_solid.png',
+                    num: 5,
+                    havePoint: false,
+                    haveGrade: false,
+                    unit: '分',
+                    grade: evaluateResult/2,
+                    height: 30,
+                    width: 30
+                });
+
+                //将页面滑动到最底部
+                var height = +($(document).height()) + 500;
+
+                $('html, body, .reply-evaluate-result').animate({
+                    scrollTop: height
+                }, 1500);
+
+            });
+
+        }, 500);
+        
+        return false;
 
         //数据的保存操作已经在插件中实现
         var evaluateResult = +($('#evaluateResult').val());

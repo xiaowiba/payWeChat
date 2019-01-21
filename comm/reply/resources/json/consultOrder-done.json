@@ -1,0 +1,89 @@
+{
+  "result": 200,
+  "data": {
+    "orderId": 24,
+    "patientId": 15952,
+    "patientName": "小尾巴",
+    "patientPlatformKey": "42b891cd",
+    "headImg": "",
+    "gender": "",
+    "age": "",
+    "doctorId": 4350,
+    "doctorName": "张志彬",
+    "doctorPlatformKey": "42b891cd",
+    "contentFirst": [
+      {
+        "contType": 1,
+        "cont": "99999999999",
+        "length": 0
+      }
+    ],
+    "contentFirstReply": [
+      {
+        "contType": 2,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consult/files/HmProvider/4350/images/adda2019012114466620553325325.jpg",
+        "length": 0
+      },
+      {
+        "contType": 3,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consult/files/HmProvider/4350/voices/adda2019012114469620553325325.aac",
+        "length": 2
+      },
+      {
+        "contType": 1,
+        "cont": "啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊",
+        "length": 0
+      }
+    ],
+    "contentMore": [
+      {
+        "contType": 2,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consultation/files/HmPatient/19814/images/adda2019012114551525553325325.jpg",
+        "length": 0
+      },
+      {
+        "contType": 1,
+        "cont": "8888888888土巴兔哦里咯了几百块钱的东西，，，，，，，查了吗？？？？？？拉卡拉的话就可以的，，",
+        "length": 0
+      }
+    ],
+    "contentMoreReply": [
+      {
+        "contType": 2,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consult/files/HmProvider/4350/images/adda2019012114569825553325325.jpg",
+        "length": 0
+      },
+      {
+        "contType": 3,
+        "cont": "https://xhyydevelop.mdruby.cn/hdata/XHYY/consult/files/HmProvider/4350/voices/adda2019012114561726553325325.aac",
+        "length": 4
+      },
+      {
+        "contType": 1,
+        "cont": "来了波，，◝😎◟💨☔️🏉🎱🌫🎱⚽️就是咯，，，轮着休息休息了吧吃了没有呀，！",
+        "length": 0
+      }
+    ],
+    "scheduleTime1": "2019-01-21 14:55",
+    "scheduleTime2": "2019-01-21 14:55",
+    "scheduleTime3": "2019-01-21 14:56",
+    "remainTime": "2019-01-23 14点之前",
+    "outTradeNo": "20190121143921831981435283329303",
+    "totalFee": 0.01,
+    "addTime": "2019-01-21 14:39:21",
+    "payTime": "2019-01-21 14:39:28",
+    "closeReson": "",
+    "state": "已完成",
+    "type": 3,
+    "contentType": 4,
+    "more": 0,
+    "score": 0,
+    "firstTime": "2019-01-21 14:39:21",
+    "replyTime": "2019-01-21 14:46:21",
+    "moreTime": "2019-01-21 14:55:27",
+    "replyMoreTime": "2019-01-21 14:56:26",
+    "getScore": 0
+  },
+  "message": "成功",
+  "isdes": false
+}
