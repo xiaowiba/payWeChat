@@ -1,9 +1,9 @@
 {
   "result": 200,
   "data": {
-    "draftCount": 1,
-    "questionCount": 2,
-    "doctorCount": 1
+    "draftCount": 11,
+    "questionCount": 26,
+    "doctorCount": 18
   },
   "message": "成功",
   "isdes": false

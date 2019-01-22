@@ -15,7 +15,7 @@ commApp.controller('imgController', function ($scope, $state, $http, $filter, $t
         $.ajax({
             async: false,
             method: 'get',
-            url:'/wxPayH5Api/payIndex',
+            url:'../personal/resources/json/payIndex.json',
             data:{
                 account:$scope.account,
                 openId:$scope.openId
@@ -28,7 +28,7 @@ commApp.controller('imgController', function ($scope, $state, $http, $filter, $t
                     return false;
                 }
 
-                var data = (JSON.parse(Data)).data;
+                var data = Data.data;
 
                 //微信openID
                 $scope.openId = data.openId;
@@ -100,6 +100,10 @@ commApp.controller('imgController', function ($scope, $state, $http, $filter, $t
                     var fd = new FormData();
 
                     fd.append('name', blobs, '1.jpg');
+
+                    mui.toast('演示数据,不可操作');
+                    mui.hideLoading();
+                    return false;
 
                     $.ajax({
                         async: true,
